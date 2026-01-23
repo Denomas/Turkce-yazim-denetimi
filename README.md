@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Turkish](https://img.shields.io/badge/lang-T%C3%BCrk%C3%A7e-red.svg)](README.md)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MiZyT_zUmm0?si=erLGENhVv4asCQ5F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Vale Turkish Tanıtım Videosu](https://img.youtube.com/vi/MiZyT_zUmm0/maxresdefault.jpg)](https://www.youtube.com/watch?v=MiZyT_zUmm0)
 
 Türkçe metinler için Vale linter stil kuralları. Bu paket, Türkçe yazım ve dilbilgisi hatalarını otomatik olarak tespit eder.
 
