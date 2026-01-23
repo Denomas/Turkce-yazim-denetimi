@@ -1,12 +1,15 @@
 # Vale Turkish (Türkçe Stil Rehberi)
 
+![Vale Turkish Banner](assets/banner.svg)
+
 [![Vale](https://img.shields.io/badge/vale-3.x-blue.svg)](https://vale.sh)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Turkish](https://img.shields.io/badge/lang-T%C3%BCrk%C3%A7e-red.svg)](README.md)
 
-[![Vale Turkish Tanıtım Videosu](https://img.youtube.com/vi/MiZyT_zUmm0/maxresdefault.jpg)](https://www.youtube.com/watch?v=MiZyT_zUmm0)
-
 Türkçe metinler için Vale linter stil kuralları. Bu paket, Türkçe yazım ve dilbilgisi hatalarını otomatik olarak tespit eder.
+
+[![Videoyu İzle](https://img.youtube.com/vi/MiZyT_zUmm0/maxresdefault.jpg)](https://www.youtube.com/watch?v=MiZyT_zUmm0)
+
 
 ## Özellikler
 
