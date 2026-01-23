@@ -1,6 +1,6 @@
 # Temiz Dosya
 
-Bu dosya Vale Türkçe kurallarına tam uyumludur.
+Bu belgedeki tüm cümleler Vale Türkçe kurallarına tam olarak uyar.
 
 ## Kurallar
 
@@ -9,4 +9,4 @@ Bu dosya Vale Türkçe kurallarına tam uyumludur.
 3. Teşekkürler kelimesi doğru yazılmıştır.
 4. Toplantı ayarlamak gibi düzgün Türkçe ifadeler kullanılır.
 5. GitHub ve JavaScript gibi teknik terimler doğru yazılır.
-6. Cümleler büyük harfle başlar.
+6. Tüm cümleler büyük harfle başlar.

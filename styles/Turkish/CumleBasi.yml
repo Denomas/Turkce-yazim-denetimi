@@ -3,6 +3,8 @@ message: "Cümle büyük harfle başlamalı."
 level: error
 match: $sentence
 style: sentence
-# Sadece paragrafları kontrol et (Başlıkları ve listeleri atla)
-scope: paragraph
-
+# Bu kuralı sadece paragraflar ve liste öğeleri için uygula.
+# Başlıkları (heading) bu kuraldan hariç tut.
+scope:
+  - paragraph
+  - list_item
