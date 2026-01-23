@@ -28,3 +28,6 @@ filters:
   - '\b\d+[.,]?\d*\b'
   # Kısaltmalar (büyük harfle yazılanlar)
   - '\b[A-Z]{2,}\b'
+  # Yaygın Türkçe fiil çekimleri (Hunspell eksiklerini kapatmak için)
+  # Kök + Zaman/Mod + Şahıs (Basitleştirilmiş - Benzeşme ve yardımcı ünlüler dahil)
+  - '\b[a-zğüşıöç]+(?:mek|mak|me|ma|iş|uş|er|ar|ir|ır|yor|ecek|acak|miş|mış|muş|mü|di|dı|du|dü|ti|tı|tu|tü)(?:im|ım|um|üm|sin|sın|sun|sün|iz|ız|uz|üz|ler|lar|niz|nız|nuz|nüz|k|m|n)?\b'
