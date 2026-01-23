@@ -228,13 +228,13 @@ vale-turkish/
 
 ## Katkıda Bulunma
 
-Katkılarınızı bekliyoruz! Yeni kurallar eklemek veya mevcut kuralları iyileştirmek için:
+Bu proje hepimizin! Katkılarınızı bekliyoruz. Nasıl destek olabileceğinizi öğrenmek için lütfen [KATKIDA_BULUNMA.md](KATKIDA_BULUNMA.md) dosyasını okuyun.
 
-1. Bu repoyu fork edin
-2. Yeni bir branch oluşturun (`git checkout -b yeni-kural`)
-3. Değişikliklerinizi commit edin (`git commit -am 'Yeni kural eklendi'`)
-4. Branch'inizi push edin (`git push origin yeni-kural`)
-5. Pull Request açın
+Kısaca:
+1.  Bu repoyu fork edin.
+2.  Yeni bir dal (branch) oluşturun.
+3.  Değişikliklerinizi yapın ve test edin.
+4.  Bize bir Pull Request gönderin.
 
 ### Yeni Kural Ekleme
 
@@ -242,7 +242,8 @@ Katkılarınızı bekliyoruz! Yeni kurallar eklemek veya mevcut kuralları iyile
 
 ```yaml
 extends: substitution
-message: "'%s' yerine '%s' kullanın"
+# Emoji ve nazik dil kullanımı önemlidir
+message: "🇹🇷 Türkçemizi koruyalım: '%s' kullanın ('%s' yerine)"
 level: error
 ignorecase: true
 swap:
