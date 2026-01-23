@@ -231,7 +231,7 @@ vale-turkish/
 Bu proje hepimizin! Katkılarınızı bekliyoruz. Nasıl destek olabileceğinizi öğrenmek için lütfen [KATKIDA_BULUNMA.md](KATKIDA_BULUNMA.md) dosyasını okuyun.
 
 Kısaca:
-1.  Bu repoyu fork edin.
+1.  Bu projeyi kendi hesabınıza kopyalayın (Çatallama/Fork).
 2.  Yeni bir dal (branch) oluşturun.
 3.  Değişikliklerinizi yapın ve test edin.
 4.  Bize bir Pull Request gönderin.

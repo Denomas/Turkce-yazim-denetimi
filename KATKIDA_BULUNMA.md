@@ -14,7 +14,7 @@ Kullandığınız kurallarda bir yanlışlık mı fark ettiniz? Veya Vale doğru
 
 ### 2. Kural Ekleyin veya Düzeltin ✏️
 Projenin kalbine dokunmak isterseniz:
-1.  Bu projeyi kendi hesabınıza kopyalayın (**Fork** edin).
+1.  Bu projeyi kendi hesabınıza kopyalayın (Çatallama/Fork).
 2.  Bilgisayarınıza indirin ve değişikliklerinizi yapın.
     *   *Yeni kural eklerken:* `styles/Turkish/` klasörüne bakın.
     *   *Kelime eklerken:* `styles/config/vocabularies/Turkish/accept.txt` dosyasına ekleyin.
