@@ -171,7 +171,6 @@ swap:
   conference: konferans
   seminar: seminer
   webinar: web semineri
-  hackathon: hackathon
   meetup: buluşma
   event: etkinlik
   community: topluluk
@@ -274,9 +273,3 @@ swap:
   director: direktör
   vp: başkan yardımcısı
   president: başkan
-  ceo: ceo
-  cto: cto
-  cfo: cfo
-  coo: coo
-  cmo: cmo
-
