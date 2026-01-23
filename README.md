@@ -1,4 +1,4 @@
-# Vale Türkçe Stil Rehberi
+# Vale Turkish (Türkçe Stil Rehberi)
 
 [![Vale](https://img.shields.io/badge/vale-3.x-blue.svg)](https://vale.sh)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -63,10 +63,10 @@ scoop install vale
 
 ```bash
 # Repo'yu klonlayın
-git clone https://github.com/tolgakaratas/vale-turkce-ayarlar.git
+git clone https://github.com/tolgakaratas/vale-turkish.git
 
 # Kurulum scriptini çalıştırın
-cd vale-turkce-ayarlar
+cd vale-turkish
 ./install.sh
 ```
 
@@ -79,7 +79,7 @@ cd vale-turkce-ayarlar
 mkdir -p ~/.config/vale/styles
 
 # Dosyaları kopyalayın
-cp -r styles/Turkce ~/.config/vale/styles/
+cp -r styles/Turkish ~/.config/vale/styles/
 cp -r styles/dictionaries ~/.config/vale/styles/
 
 # Örnek konfigürasyonu kopyalayın
@@ -97,10 +97,10 @@ source ~/.zshrc
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.vale\styles"
 
 # Dosyaları kopyalayın
-Copy-Item -Recurse styles\Turkce "$env:USERPROFILE\.vale\styles\"
+Copy-Item -Recurse styles\Turkish "$env:USERPROFILE\.vale\styles\"
 Copy-Item -Recurse styles\dictionaries "$env:USERPROFILE\.vale\styles\"
 
-# Konfigürasyon dosyasını kopyalayın
+# Konfigürasyon dosyası kopyalama
 Copy-Item .vale.ini "$env:USERPROFILE\.vale\.vale.ini"
 
 # Çevre değişkenini ayarlayın (kalıcı)
@@ -137,7 +137,7 @@ vale test.tr.md
 Çıktı:
 ```
  test.tr.md
- 1:1  error  'bir şey' ayrı yazılmalı: 'birşey'  Turkce.BitisikYazim
+ 1:1  error  'bir şey' ayrı yazılmalı: 'birşey'  Turkish.BitisikYazim
 ```
 
 ### VS Code Entegrasyonu
@@ -151,15 +151,15 @@ vale test.tr.md
 
 | Kural | Açıklama | Seviye |
 |-------|----------|--------|
-| `Turkce.BitisikYazim` | Ayrı yazılması gereken kelimeler | error |
-| `Turkce.Buyukharf` | Özel isimlerin büyük harfle yazımı | warning |
-| `Turkce.CumleBasi` | Cümle başı büyük harf kontrolü | error |
-| `Turkce.DeDABaglaci` | de/da bağlacı kontrolü | warning |
-| `Turkce.KiEki` | ki bağlacı kontrolü | warning |
-| `Turkce.Noktalama` | Noktalama işaretleri kontrolü | error |
-| `Turkce.Spelling` | Türkçe yazım denetimi | error |
-| `Turkce.Tekrar` | Kelime tekrarı kontrolü | warning |
-| `Turkce.YanlisTurkce` | Yaygın yazım hataları | error |
+| `Turkish.BitisikYazim` | Ayrı yazılması gereken kelimeler | error |
+| `Turkish.Buyukharf` | Özel isimlerin büyük harfle yazımı | warning |
+| `Turkish.CumleBasi` | Cümle başı büyük harf kontrolü | error |
+| `Turkish.DeDABaglaci` | de/da bağlacı kontrolü | warning |
+| `Turkish.KiEki` | ki bağlacı kontrolü | warning |
+| `Turkish.Noktalama` | Noktalama işaretleri kontrolü | error |
+| `Turkish.Spelling` | Türkçe yazım denetimi | error |
+| `Turkish.Tekrar` | Kelime tekrarı kontrolü | warning |
+| `Turkish.YanlisTurkce` | Yaygın yazım hataları | error |
 
 ## Konfigürasyon
 
@@ -172,20 +172,20 @@ Vocab = Custom
 
 # Türkçe dosyalar için
 [*.tr.md]
-BasedOnStyles = Turkce
+BasedOnStyles = Turkish
 
 # veya tüm markdown dosyaları için
 [*.md]
-BasedOnStyles = Turkce
+BasedOnStyles = Turkish
 ```
 
 ### Belirli Kuralları Kapatma
 
 ```ini
 [*.tr.md]
-BasedOnStyles = Turkce
+BasedOnStyles = Turkish
 # Yazım denetimini kapat (false positive çok olursa)
-Turkce.Spelling = NO
+Turkish.Spelling = NO
 ```
 
 ### Özel Kelime Ekleme
@@ -200,14 +200,14 @@ BaşkaBirKelime
 ## Klasör Yapısı
 
 ```
-vale-turkce-ayarlar/
+vale-turkish/
 ├── README.md
 ├── LICENSE
 ├── .vale.ini                    # Örnek konfigürasyon
 ├── install.sh                   # Kurulum scripti (macOS/Linux)
 ├── install.ps1                  # Kurulum scripti (Windows)
 ├── styles/
-│   ├── Turkce/
+│   ├── Turkish/
 │   │   ├── BitisikYazim.yml    # Bitişik/ayrı yazım kuralları
 │   │   ├── Buyukharf.yml       # Büyük harf kuralları
 │   │   ├── CumleBasi.yml       # Cümle başı kontrolü
@@ -236,7 +236,7 @@ Katkılarınızı bekliyoruz! Yeni kurallar eklemek veya mevcut kuralları iyile
 
 ### Yeni Kural Ekleme
 
-`styles/Turkce/` klasörüne yeni bir YAML dosyası ekleyin:
+`styles/Turkish/` klasörüne yeni bir YAML dosyası ekleyin:
 
 ```yaml
 extends: substitution

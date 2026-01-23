@@ -1,0 +1,11 @@
+{
+  "name": "Turkish",
+  "description": "Turkish style guide for Vale linter. Includes spelling, grammar, and style checks.",
+  "topics": [
+    "writing",
+    "style",
+    "turkish"
+  ],
+  "author": "Antigravity",
+  "url": "https://github.com/tolgakaratas/vale-turkish"
+}

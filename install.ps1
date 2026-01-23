@@ -35,7 +35,7 @@ New-Item -ItemType Directory -Force -Path "$ConfigDir\styles" | Out-Null
 
 # Dosyaları kopyala
 Write-Host "Stil dosyaları kopyalanıyor..." -ForegroundColor Yellow
-Copy-Item -Recurse -Force "styles\Turkce" "$ConfigDir\styles\"
+Copy-Item -Recurse -Force "styles\Turkish" "$ConfigDir\styles\"
 Copy-Item -Recurse -Force "styles\dictionaries" "$ConfigDir\styles\"
 
 # Konfigürasyon dosyası

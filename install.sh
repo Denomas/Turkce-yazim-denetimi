@@ -46,7 +46,7 @@ mkdir -p "$CONFIG_DIR/styles"
 
 # Dosyaları kopyala
 echo "Stil dosyaları kopyalanıyor..."
-cp -r styles/Turkce "$CONFIG_DIR/styles/"
+cp -r styles/Turkish "$CONFIG_DIR/styles/"
 cp -r styles/dictionaries "$CONFIG_DIR/styles/"
 
 # Konfigürasyon dosyası

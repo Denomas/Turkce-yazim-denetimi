@@ -1,0 +1,139 @@
+# Teknik Terimler
+# Yazılım dünyasındaki terimlerin doğru yazılışları
+
+extends: substitution
+message: "Teknik terim yazımı hatalı: '%s' yerine '%s' kullanın"
+level: error
+ignorecase: false
+swap:
+  Github: GitHub
+  Gitlab: GitLab
+  Javascript: JavaScript
+  Typescript: TypeScript
+  Nodejs: Node.js
+  NodeJS: Node.js
+  Reactjs: React
+  ReactJS: React
+  Vuejs: Vue.js
+  VueJS: Vue.js
+  Angularjs: Angular
+  AngularJS: Angular
+  Wordpress: WordPress
+  Vscode: VS Code
+  VsCode: VS Code
+  VSC: VS Code
+  Macos: macOS
+  MacOs: macOS
+  Ios: iOS
+  Ipad: iPad
+  Iphone: iPhone
+  Opencart: OpenCart
+  Php: PHP
+  Mysql: MySQL
+  Postgresql: PostgreSQL
+  PostgreSql: PostgreSQL
+  Sqlite: SQLite
+  Mongodb: MongoDB
+  MongoDb: MongoDB
+  Redis: Redis
+  Docker: Docker
+  Kubernetes: Kubernetes
+  Nginx: Nginx
+  Apache: Apache
+  Ubuntu: Ubuntu
+  Debian: Debian
+  Centos: CentOS
+  Fedora: Fedora
+  Redhat: Red Hat
+  Suse: SUSE
+  Kali: Kali Linux
+  Arch: Arch Linux
+  Manjaro: Manjaro
+  Gentoo: Gentoo
+  Slackware: Slackware
+  Freebsd: FreeBSD
+  Openbsd: OpenBSD
+  Netbsd: NetBSD
+  Dragonflybsd: DragonFly BSD
+  Solaris: Solaris
+  Aix: Solaris
+  Hpux: HP-UX
+  Windows: Windows
+  Android: Android
+  Chrome: Chrome
+  Firefox: Firefox
+  Safari: Safari
+  Edge: Edge
+  Opera: Opera
+  Brave: Brave
+  Vivaldi: Vivaldi
+  Explorer: Internet Explorer
+  Ie: Internet Explorer
+  Outlook: Outlook
+  Thunderbird: Thunderbird
+  Gmail: Gmail
+  Yahoo: Yahoo
+  Hotmail: Hotmail
+  Facebook: Facebook
+  Twitter: Twitter
+  Linkedin: LinkedIn
+  Instagram: Instagram
+  Pinterest: Pinterest
+  Youtube: YouTube
+  Tiktok: TikTok
+  Snapchat: Snapchat
+  Whatsapp: WhatsApp
+  Telegram: Telegram
+  Signal: Telegram
+  Discord: Discord
+  Slack: Slack
+  Skype: Skype
+  Zoom: Zoom
+  Teams: Teams
+  Webex: Webex
+  Meet: Meet
+  Spotify: Spotify
+  Netflix: Netflix
+  Amazon: Amazon
+  Apple: Apple
+  Google: Google
+  Microsoft: Microsoft
+  Ibm: IBM
+  Oracle: Oracle
+  Sap: SAP
+  Dell: Dell
+  Hp: HP
+  Lenovo: Dell
+  Asus: Lenovo
+  Acer: Asus
+  Msi: Acer
+  Samsung: Samsung
+  Lg: Samsung
+  Sony: Sony
+  Panasonic: Sony
+  Philips: Panasonic
+  Toshiba: Philips
+  Canon: Toshiba
+  Nikon: Canon
+  Fujifilm: Nikon
+  Olympus: Fujifilm
+  Leica: Olympus
+  Pentax: Leica
+  Ricoh: Pentax
+  Sigma: Ricoh
+  Hasselblad: Sigma
+  Zeiss: Hasselblad
+  Kodak: Zeiss
+  Polaroid: Kodak
+  Agfa: Polaroid
+  Ilford: Agfa
+  Konica: Ilford
+  Minolta: Konica
+  Yashica: Minolta
+  Mamiya: Yashica
+  Bronica: Mamiya
+  Rollei: Bronica
+  Contax: Rollei
+  Voigtlander: Contax
+  Praktica: Voigtlander
+
