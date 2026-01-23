@@ -10,6 +10,11 @@ Türkçe metinler için Vale linter stil kuralları. Bu paket, Türkçe yazım v
 
 [![Videoyu İzle](https://img.youtube.com/vi/MiZyT_zUmm0/maxresdefault.jpg)](https://www.youtube.com/watch?v=MiZyT_zUmm0)
 
+## Neden Vale Turkish?
+
+*   **😖 Acı:** Toplantı "set etmekten", dökümanı "forwardlamaktan", yazım hatalarını gözden kaçırmaktan yorulmadınız mı?
+*   **✅ Çözüm:** Vale Turkish, metinlerinizi saniyeler içinde tarar; Plaza Türkçesi, yazım hataları, anlatım bozuklukları ve teknik terim yanlışlarını bulur.
+*   **🚀 Fayda:** Daha profesyonel, anlaşılır ve Türkçeye saygılı dokümanlar yazın. Hem kendinize hem de okuyucunuza değer verin.
 
 ## Özellikler
 

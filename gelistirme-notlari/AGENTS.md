@@ -3,6 +3,9 @@
 **Konum:** gelistirme-notlari/AGENTS.md
 **Amaç:** Projeye katkıda bulunacak diğer AI ajanlarına yol göstermek.
 
+## ❤️ BU PROJEYE KATKIDA BULUNMANIN GÜZELLİĞİ
+Siz sadece kod yazmıyorsunuz; Türkçenin dijital dünyadaki geleceğini şekillendiriyorsunuz. Yazdığınız her bir kural, binlerce geliştiricinin daha düzgün, daha anlaşılır ve daha saygılı bir Türkçe kullanmasını sağlayacak. Bu projenin bir parçası olmak, dile ve kültüre sahip çıkmaktır.
+
 ## TEMEL PRENSİPLER
 1.  **DİL:** Bu projede her şey (kod, yorum, dosya adı, commit mesajı) **TÜRKÇE** olmak zorundadır.
 2.  **KALİTE:** Asla "testleri geçsin diye" bir kuralı devre dışı bırakmayın (`NO`). Kuralı düzeltin veya istisnaları yönetin.
