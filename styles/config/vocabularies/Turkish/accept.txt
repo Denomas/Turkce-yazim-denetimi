@@ -1,6 +1,7 @@
 # Kabul Edilen Türkçe Kelimeler
 # Bu kelimeler Vale'nin Türkçe yazım denetiminde hata olarak işaretlenmeyecektir.
 
+# Temel Kelimeler
 belgedeki
 uyar
 kurallar
@@ -11,20 +12,27 @@ yazılır
 harfle
 kelimesi
 terimler
-Anadolu'nun
-Binlerce
-medeniyetlere
-saklar
-topraklarda
-Tarihin
-gezginlere
-deneyimler
+
+# Clean.md İçeriği
+dildir
+izlerini
+dilimizin
+tarihine
+bildiklerimizi
+Sistemi
+hayata
+Denizlerimiz
+denizlerle
+konumuyla
+Karadeniz'in
+karakterini
+Akdeniz
 sunar
-biridir
-boyunca
-burada
-ruhunu
-dokusundan
-Ege'nin
+birbirine
+onu
+dilimize
+nesillere
+projeler
+birikimine
 hazinedir
 zamanda

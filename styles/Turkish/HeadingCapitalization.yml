@@ -1,6 +1,7 @@
-extends: capitalization
+extends: existence
 message: "Başlık büyük harfle başlamalı."
 level: error
-match: $heading
-style: sentence
 scope: heading
+tokens:
+  # Başlık işareti (#) ve boşluktan sonra gelen küçük harfi yakala
+  - '(^#+\s+)([a-zğüşıöç])'

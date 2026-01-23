@@ -1,13 +1,26 @@
-# Hatalı Dosya
+# Berbat Bir Dosya
 
-bu dosya hatalarla doludur.
+Burada hiç bir kurala uyulmamışdır. herşey karmakarışık ve düzensiz.
 
-1. türkiye küçük yazılmış.
-2. herşey bitişik yazılmış.
-3. teşekürler yanlış yazılmış.
-4. toplantı set etmek plaza dilidir.
-5. Github ve Javascript yanlış yazılmış.
-6. birşey daha var.
-7. de/da bağlacı bitişik yazılmış: bende geliyorum.
-8. noktalama hatası var .
-9. tekrar tekrar kelime kullanımı.
+## kurallar umrumda değil
+
+1. naber müdür, toplantıyı set ettin mi?
+2. bakarız ya acelesi yokki bunun.
+3. ben gelmicem, sen gidersin.
+4. dökümanı forwardladım sana, bi check edersin.
+5. yanlız bu iş böyle olmaz, herkes kendi kafasına göre takılıyor .
+6. şöför bey sağda inicek var.
+7. herkez buraya baksın.
+8. eger yapmazsanız fena olur.
+9. deyil mi ama?
+10. orjinal fikirler lazım bize.
+11. süpriz bir gelişme oldu.
+12. şarz aleti nerde?
+13. yalnış biliyorsun sen.
+14. art arda gelen hatalar silsilesi.
+15. türkçe'yi katletmek.
+16. istanbul da yaşanmaz oldu.
+17. bende seni seviyorum.
+18. aşşağı in.
+19. yukarda ne var?
+20. kipriklerim döküldü.
