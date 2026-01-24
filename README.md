@@ -192,7 +192,7 @@ vale test.tr.md
 
 | Kural | Açıklama | Seviye |
 |-------|----------|--------|
-| `Turkish.BitisikYazim` | Ayrı yazılması gereken kelimeler | error |
+| `Turkish.BitisikYazim` | Ayrı veya bitişik yazılması gereken kelimeler | error |
 | `Turkish.Buyukharf` | Özel isimlerin büyük harfle yazımı | warning |
 | `Turkish.CumleBasi` | Cümle başı büyük harf kontrolü | error |
 | `Turkish.DeDABaglaci` | de/da bağlacı kontrolü | warning |
@@ -201,6 +201,13 @@ vale test.tr.md
 | `Turkish.Spelling` | Türkçe yazım denetimi | error |
 | `Turkish.Tekrar` | Kelime tekrarı kontrolü | warning |
 | `Turkish.YanlisTurkce` | Yaygın yazım hataları | error |
+| `Turkish.Plaza` | Plaza Türkçesi (İş dili) sadeleştirme | warning |
+| `Turkish.Akademik` | Akademik dilde duruluk ve sadelik | suggestion |
+| `Turkish.Fabrika` | Üretim sahası ve fabrika jargonu | warning |
+| `Turkish.Teknik` | Teknik terimlerin standart yazımı | error |
+| `Turkish.Sadelik` | Genel anlatım bozuklukları ve sadelik | suggestion |
+| `Turkish.Deyimler` | Deyimlerin doğru kullanımı | error |
+| `Turkish.UzunCumle` | Okumayı zorlaştıran uzun cümleler | warning |
 
 ## Konfigürasyon
 
@@ -249,14 +256,21 @@ vale-turkish/
 ├── install.ps1                  # Kurulum scripti (Windows)
 ├── styles/
 │   ├── Turkish/
+│   │   ├── Akademik.yml        # Akademik duruluk kuralları
 │   │   ├── BitisikYazim.yml    # Bitişik/ayrı yazım kuralları
 │   │   ├── Buyukharf.yml       # Büyük harf kuralları
 │   │   ├── CumleBasi.yml       # Cümle başı kontrolü
 │   │   ├── DeDABaglaci.yml     # de/da bağlacı
+│   │   ├── Deyimler.yml        # Deyimlerin doğru kullanımı
+│   │   ├── Fabrika.yml         # Fabrika/Üretim jargonu
 │   │   ├── KiEki.yml           # ki bağlacı
 │   │   ├── Noktalama.yml       # Noktalama işaretleri
+│   │   ├── Plaza.yml           # Plaza Türkçesi sadeleştirme
+│   │   ├── Sadelik.yml         # Genel sadelik ve duruluk
 │   │   ├── Spelling.yml        # Yazım denetimi
+│   │   ├── Teknik.yml          # Teknik terimler
 │   │   ├── Tekrar.yml          # Kelime tekrarı
+│   │   ├── UzunCumle.yml       # Uzun cümle kontrolü
 │   │   └── YanlisTurkce.yml    # Yaygın hatalar
 │   └── dictionaries/
 │       ├── tr.aff              # Hunspell affix dosyası
