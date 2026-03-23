@@ -1,0 +1,29 @@
+.github/vale-version
+  1d815db16820323f 1
+styles/Turkish/ListCapitalization.yml
+  1d815db16820323f 3,7-42
+styles/Turkish/ParagraphCapitalization.yml
+  1d815db16820323f 3,7-42
+fixtures/clean.md
+  1d815db16820323f 52-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "9ee1c9029cf415fbee0940d18b03d95828e04624",
+  "prompts": {
+    "1d815db16820323f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be17d1d5-b85b-442f-8fb0-a279c748dda5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 180,
+      "total_deletions": 88,
+      "accepted_lines": 101,
+      "overriden_lines": 0
+    }
+  }
+}
