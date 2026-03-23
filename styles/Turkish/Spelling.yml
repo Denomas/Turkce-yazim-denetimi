@@ -50,3 +50,47 @@ filters:
   - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}l[iıuü]k\b'
   # -deki/-daki (bulunma sıfatı): belgedeki, sistemdeki vb.
   - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}d[ae]ki\b'
+  # --- Vale Go binding workaround filtreleri ---
+  # Aşağıdaki filtreler Vale'in Hunspell entegrasyonundaki eksiklikleri kapatır.
+  # Hunspell CLI bu kelimeleri tanır ama Vale tanımaz.
+  # Vale upstream düzeltildiğinde bu filtreler kaldırılabilir.
+  # Datif: -e/-a/-ye/-ya/-ne/-na/-sine/-sına (belediyeye, adrese, belediyesine)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[sy]?[iıuü]?n?[eaEA]\b'
+  # Datif çoğul: -lere/-lara (belediyelere, ekiplere, kriterlere)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}l[ae]r[eaEA]\b'
+  # Lokatif kısa: -de/-da/-te/-ta (belediyede, projede, mevzuatta)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[dt][ae]\b'
+  # Ablatif kısa: -den/-dan/-ten/-tan (noterden, sahadan, yerlerden)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[dt][ae]n\b'
+  # Ablatif çoğul: -lerden/-lardan (Belediyelerden, Testlerden)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}l[ae]rd[ae]n\b'
+  # Akuzatif kısa: -eyi/-ayı/-yi/-yı (incelemeyi, vekaletnameyi)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[eaEA]?y[iıuü]\b'
+  # Bildirme eki: -dır/-dir/-dur/-dür/-tır/-tir (zorunludur, budur, zordur)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[dt][iıuü]r\b'
+  # Zarf-fiil: -arak/-erek/-ıp/-ip/-up/-üp (bulundurarak, ederek, edilip)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}(?:[ae]r[ae]k|[iıuü]p)\b'
+  # Sıfat-fiil: -en/-an/-nen/-nan (belirlenen, oluşturulan, eklenen)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}n?[ea]n\b'
+  # İnstrümental: -le/-la/-yle/-yla (hizmetiyle, kurallara, onlarla)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[iy]?l[eaEA]\b'
+  # İyelik + ek: -yonu/-yonu/-syon (otomasyonu, entegrasyonu)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[sy]yon[uü]\b'
+  # -ama/-eme (olumsuz yeterlilik): yapılama, edileme, bulunamaz
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[ae]m[ae]z?\b'
+  # Çoğul yalın: -ler/-lar (Parametreler, Riskler, Sertifikalar)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}l[ae]r\b'
+  # İyelik 3. tekil: -esi/-ası/-isi/-ısı/-usu (cephesi, maliyeti, analizi)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[iıuü]s[iıuü]\b'
+  # İyelik 3. tekil (doğrudan): -si/-sı/-su/-sü (vergisi, tescili)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}s[iıuü]\b'
+  # İyelik 1. çoğul: -miz/-mız/-muz/-müz (ekibimiz, platformumuz)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[iıuü]?m[iıuü]z\b'
+  # İyelik 2. çoğul: -niz/-nız/-nuz/-nüz (verebilirsiniz, musunuz)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[iıuü]?n[iıuü]z\b'
+  # Sıfat yapım: -li/-lı/-lu/-lü/-siz/-sız (bedelli, tescilli, bedelsiz)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[ls][iıuü]z?\b'
+  # Fiil edilgen/dönüşlü: -lur/-lür/-lır/-lir (kurulur, duyurulur)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}l[iıuü]r\b'
+  # -yon/-syon (yabancı kökenli): optimizasyon
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[sy]yon\b'

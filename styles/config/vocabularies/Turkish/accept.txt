@@ -86,8 +86,11 @@ negative
 konteyner
 sponsor
 
-# ─── Türkçe Kısaltmalar ─────────────────────────────────
-# Neden: Yaygın Türkçe kısaltma, Hunspell sözlüğünde yok
+# ─── Türkçe Kısaltmalar ve Birimler ────────────────────
+# Neden: Yaygın Türkçe kısaltma/birim, Hunspell sözlüğünde yok
 bkz
+cm
+km
+tl
 vb
 vd
