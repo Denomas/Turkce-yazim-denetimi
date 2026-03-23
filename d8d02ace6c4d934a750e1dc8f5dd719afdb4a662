@@ -1,0 +1,31 @@
+belgeler/en/contributing.md
+  fa629cb413a34b5c 40-77
+KATKIDA_BULUNMA.md
+  fa629cb413a34b5c 34-76
+belgeler/en/developer-workflow.md
+  fa629cb413a34b5c 130-144
+AGENTS.md
+  fa629cb413a34b5c 79-93
+belgeler/tr/katki/gelistirici-is-akisi.md
+  fa629cb413a34b5c 175-202
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "d8d02ace6c4d934a750e1dc8f5dd719afdb4a662",
+  "prompts": {
+    "fa629cb413a34b5c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "417c24d3-1f5b-4e2f-8432-11c10ed97316",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 139,
+      "overriden_lines": 0
+    }
+  }
+}
