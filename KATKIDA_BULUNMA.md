@@ -1,6 +1,6 @@
 # Bu Projeye Nasıl Destek Olabilirsiniz? 🤝
 
-Merhaba! **Vale Turkish** projesine ilgi gösterdiğiniz için teşekkür ederiz. Bu proje, Türkçemizin dijital dünyada daha doğru ve güzel kullanılması için başlatılmış bir topluluk hareketidir.
+Merhaba! **Türkçe Yazım Denetimi** projesine ilgi gösterdiğiniz için teşekkür ederiz. Bu proje, [Denomas](https://denomas.com) tarafından Türkçemizin dijital dünyada daha doğru ve güzel kullanılması için başlatılmış bir topluluk hareketidir.
 
 Katkıda bulunmak için kodlama uzmanı veya dilbilimci olmanıza gerek yok. Gözünüze çarpan bir yazım hatasını düzeltmek, yeni bir "Plaza Türkçesi" kelimesi eklemek veya sadece bir fikir belirtmek bile bizim için çok değerlidir.
 

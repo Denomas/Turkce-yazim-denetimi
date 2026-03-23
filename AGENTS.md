@@ -2,7 +2,7 @@
 
 **Oluşturulma Tarihi:** 23 Ocak 2026
 **Son Güncelleme:** 23 Ocak 2026
-**Proje:** Vale Turkish (Türkçe Stil Rehberi)
+**Proje:** Türkçe Yazım Denetimi (Denomas)
 **Konum:** Kök Dizin
 
 ## 🌟 PROJENİN RUHU
@@ -20,7 +20,7 @@ Bu projenin en önemli kuralı şudur: **Sadece ekleyerek zenginleştiriyoruz.**
 
 ## 📁 YAPI
 ```text
-vale-turkish/
+Turkce-yazim-denetimi/
 ├── .github/                # CI/CD İş Akışları (Test ve Release)
 ├── fixtures/               # Test Dosyaları (Temiz ve Hatalı örnekler)
 ├── gelistirme-notlari/     # Geliştiriciler için ek teknik rehberler

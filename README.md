@@ -1,12 +1,12 @@
-# Vale Turkish (Türkçe Stil Rehberi) 🇹🇷
+# Türkçe Yazım Denetimi 🇹🇷
 
-![Vale Turkish Banner](assets/banner.svg)
+![Türkçe Yazım Denetimi Banner](assets/banner.svg)
 
 [![Test](https://github.com/Denomas/Turkce-yazim-denetimi/actions/workflows/test.yml/badge.svg)](https://github.com/Denomas/Turkce-yazim-denetimi/actions/workflows/test.yml)
-[![Vale](https://img.shields.io/badge/vale-3.x-blue.svg)](https://vale.sh)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Turkish](https://img.shields.io/badge/lang-T%C3%BCrk%C3%A7e-red.svg)](README.md)
-[![GitHub Release](https://img.shields.io/github/v/release/Denomas/Turkce-yazim-denetimi)](https://github.com/Denomas/Turkce-yazim-denetimi/releases)
+[![Sürüm](https://img.shields.io/github/v/release/Denomas/Turkce-yazim-denetimi)](https://github.com/Denomas/Turkce-yazim-denetimi/releases)
+[![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Türkçe](https://img.shields.io/badge/lang-T%C3%BCrk%C3%A7e-red.svg)](README.md)
+[![Vale](https://img.shields.io/badge/altyap%C4%B1-Vale-blue.svg)](https://vale.sh)
 
 **"Birşey" mi yazılır yoksa "bir şey" mi? "Herkez" mi "herkes" mi? Artık dert etmenize gerek yok!**
 
@@ -14,7 +14,7 @@
 
 Türkçe, bin yıllık zengin bir dil. Ama dijital dünyada yazarken hepimizin eli bazen kayıyor: toplantıda "set etmekten", belgede "forwardlamaktan", "herşey"i bitişik yazmaktan... Bu proje, **Türkçemizin dijital dünyadaki koruyucusu** olmak için yola çıktı.
 
-Vale Turkish, yazılarınızın yanında sessizce duran, **7/24 çalışan bir Türkçe öğretmeni** gibidir. Markdown ve metin dosyalarınızdaki yazım hatalarını, Plaza Türkçesini, anlatım bozukluklarını ve teknik terim yanlışlarını otomatik olarak bulur ve nazikçe düzeltme önerir.
+Türkçe Yazım Denetimi, yazılarınızın yanında sessizce duran, **7/24 çalışan bir Türkçe öğretmeni** gibidir. Markdown ve metin dosyalarınızdaki yazım hatalarını, Plaza Türkçesini, anlatım bozukluklarını ve teknik terim yanlışlarını otomatik olarak bulur ve nazikçe düzeltme önerir.
 
 ### 💡 Size ne fayda sağlar?
 
@@ -29,11 +29,12 @@ Vale Turkish, yazılarınızın yanında sessizce duran, **7/24 çalışan bir T
 *   Okul için hazırladığınız **ödev ve tezlerde**
 *   İnternet siteniz için yazdığınız **blog yazılarında**
 *   Açık kaynak projelerinizin **README ve dokümantasyonunda**
+*   Yapay zeka ajanlarınızın ürettiği **Türkçe içeriklerin kalite kontrolünde**
 *   Hatta yazdığınız bir **kitap veya makalede**
 
-### 🤖 Vale nedir?
+### 🤖 Nasıl çalışır?
 
-Vale, yazılarınızı kontrol eden açık kaynaklı bir prose linter'dır. Yazılımcılar için linter'lar ne ise (ESLint, Pylint), yazarlar ve teknik dokümantasyon ekipleri için Vale odur. Biz bu akıllı motora Türkçenin kurallarını öğrettik. Yani Vale işin "beyni", vale-turkish ise o beyne neyin doğru neyin yanlış olduğunu söyleyen "bilgi bankasıdır".
+Türkçe Yazım Denetimi, altyapısında [Vale](https://vale.sh) prose linter motorunu kullanır. Vale, metin dosyalarını kurallara göre denetleyen açık kaynaklı bir araçtır. Biz bu güçlü motora **16 farklı Türkçe kural dosyası** ve **36 MB'lık Hunspell sözlüğü** öğrettik. Siz sadece "çalıştır" deyin, gerisini o halleder.
 
 [![Videoyu İzle](https://img.youtube.com/vi/MiZyT_zUmm0/maxresdefault.jpg)](https://www.youtube.com/watch?v=MiZyT_zUmm0)
 
@@ -273,7 +274,7 @@ Artık yazarken hatalar anında altı çizili olarak görünür!
 
 ### Sadece belirli dizinlerdeki Türkçe dosyaları denetleme
 
-Projenizde hem Türkçe hem İngilizce belgeler varsa, vale-turkish'i yalnızca Türkçe dosyalara uygulayabilirsiniz.
+Projenizde hem Türkçe hem İngilizce belgeler varsa, Türkçe Yazım Denetimi'ni yalnızca Türkçe dosyalara uygulayabilirsiniz.
 
 **Pre-commit ile** — `files` parametresiyle regex deseni belirtin:
 
@@ -312,7 +313,7 @@ vale docs/tr/
 
 ### Uyarı seviyesini özelleştirme
 
-Vale Turkish'in 3 uyarı seviyesi vardır. Hangilerini görmek istediğinizi seçebilirsiniz:
+Türkçe Yazım Denetimi'nin 3 uyarı seviyesi vardır. Hangilerini görmek istediğinizi seçebilirsiniz:
 
 | Seviye | Anlamı | Kullanım Senaryosu |
 |--------|--------|-------------------|
@@ -521,7 +522,7 @@ BasedOnStyles = Turkish
 ### Klasör yapısı
 
 ```
-vale-turkish/
+Turkce-yazim-denetimi/
 ├── .pre-commit-hooks.yaml          # Pre-commit hook tanımı
 ├── action.yml                      # GitHub Actions composite action
 ├── .gitlab/
@@ -568,17 +569,17 @@ vale-turkish/
 
 > Bu bölüm "neden" sorularını yanıtlar. Arka plan, felsefe ve tasarım kararları.
 
-### Neden Vale Turkish?
+### Neden Türkçe Yazım Denetimi?
 
 Toplantıda "set etmekten", belgede "forwardlamaktan", yazım hatalarını gözden kaçırmaktan yorulmadınız mı?
 
 *   **Sorun:** Türkçe için kapsamlı bir otomatik yazım denetim aracı yoktu. İngilizce için yüzlerce araç varken, Türkçe yazanlar kendi haline bırakılmıştı.
-*   **Çözüm:** Vale Turkish, 16 farklı kural dosyasıyla Plaza Türkçesinden bitişik yazıma, teknik terimlerden uzun cümlelere kadar geniş bir yelpazeyi kapsar.
+*   **Çözüm:** Türkçe Yazım Denetimi, 16 farklı kural dosyasıyla Plaza Türkçesinden bitişik yazıma, teknik terimlerden uzun cümlelere kadar geniş bir yelpazeyi kapsar.
 *   **Fayda:** Daha profesyonel, anlaşılır ve Türkçeye saygılı belgeler yazarsınız. Hem kendinize hem de okuyucunuza değer verirsiniz.
 
 ### Ne kontrol eder?
 
-Vale Turkish 6 ana kategoride denetim yapar:
+Türkçe Yazım Denetimi 6 ana kategoride denetim yapar:
 
 *   **Yazım kuralları** — Bitişik/ayrı yazım (`birşey` → `bir şey`), büyük harf (`istanbul` → `İstanbul`), de/da ve ki bağlaçları, noktalama, cümle başı kontrolü
 *   **Yazım denetimi** — Hunspell tabanlı Türkçe sözlük ile kelime doğrulaması
@@ -597,13 +598,13 @@ Bu projenin temel ilkesi **ekleyerek zenginleştirmektir:**
 
 Detaylı bilgi için [Geliştirici Rehberi (KATKIDA_BULUNMA.md)](KATKIDA_BULUNMA.md) ve [Proje Manifestosu (AGENTS.md)](AGENTS.md) dosyalarına göz atabilirsiniz.
 
-### Neden otomatik Vale kurulumu?
+### Neden otomatik kurulum?
 
-Pre-commit hook'umuz, sistemde Vale kurulu olmasa bile çalışır. Bu tasarım kararının arkasında birkaç neden var:
+Türkçe Yazım Denetimi, sistemde altyapı kurulu olmasa bile çalışır. Bu tasarım kararının arkasında birkaç neden var:
 
 1. **Sürtünmeyi azaltmak** — Yeni bir geliştirici projeye katıldığında `pre-commit install` yeterli olsun, ek kurulum adımı olmasın.
-2. **CI ortamları** — GitHub Actions ve GitLab CI runner'larında Vale önceden kurulu değildir. Wrapper script bunu otomatik halleder.
-3. **Platform bağımsızlığı** — Script, çalıştığı platformu algılayıp doğru binary'yi indirir (macOS Intel/ARM, Linux x86/ARM, Windows).
+2. **CI ortamları** — GitHub Actions ve GitLab CI runner'larında altyapı önceden kurulu değildir. Kurulum betiği bunu otomatik halleder.
+3. **Platform bağımsızlığı** — Betik, çalıştığı platformu algılayıp doğru sürümü indirir (macOS Intel/ARM, Linux x86/ARM, Windows).
 
 ---
 
@@ -613,9 +614,9 @@ Bu proje hepimizin! Türkçemize birlikte sahip çıkıyoruz. Nasıl destek olab
 
 Kısaca:
 1.  Bu projeyi kendi hesabınıza kopyalayın (Çatallama/Fork).
-2.  Yeni bir dal (branch) oluşturun.
+2.  Yeni bir dal oluşturun.
 3.  Değişikliklerinizi yapın ve test edin.
-4.  Bize bir Pull Request gönderin.
+4.  Bize bir birleştirme isteği (Pull Request) gönderin.
 
 ### Yeni kural ekleme
 
@@ -632,17 +633,25 @@ swap:
 
 ## Kaynaklar
 
-- [Vale Resmi Dokümantasyonu](https://vale.sh/docs/)
 - [TDK Yazım Kılavuzu](https://www.tdk.gov.tr/icerik/yazim-kurallari/)
 - [Hunspell Türkçe Sözlük](https://github.com/wooorm/dictionaries)
+- [Vale Dokümantasyonu](https://vale.sh/docs/) (altyapı motoru)
 
 ## Lisans
 
-MIT License - Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+MIT Lisansı - Ayrıntılar için [LICENSE](LICENSE) dosyasına bakın.
+
+---
+
+## Denomas Hakkında
+
+Bu proje [Denomas](https://denomas.com) tarafından geliştirilmekte ve sürdürülmektedir. Denomas, yazılım geliştirme süreçlerinde kaliteyi ve verimliliği artırmaya odaklanan bir teknoloji şirketidir. Türkçenin dijital ortamda doğru kullanılması, şirketin önem verdiği konuların başında gelmektedir.
+
+Yapay zeka ajanlarının ve ekip arkadaşlarının doğru Türkçe yazabilmesi vizyonuyla yola çıktık. Her doğru yazılmış kelime, Türkçemizin geleceğine yapılan küçük ama anlamlı bir yatırımdır.
 
 ## Teşekkürler
 
-- [Vale](https://vale.sh) - Açık kaynak prose linter
-- [wooorm/dictionaries](https://github.com/wooorm/dictionaries) - Hunspell sözlükleri
-- TDK - Türkçe yazım kuralları referansı
+- [Vale](https://vale.sh) — Altyapıda kullanılan açık kaynak metin denetleme motoru
+- [wooorm/dictionaries](https://github.com/wooorm/dictionaries) — Hunspell sözlükleri
+- TDK — Türkçe yazım kuralları referansı
 - Ve bu projeye katkıda bulunan, Türkçesine değer veren herkese! 🙏

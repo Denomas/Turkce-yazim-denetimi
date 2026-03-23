@@ -1,6 +1,6 @@
-name: 'Vale Turkish Linter'
+name: 'Vale Turkish — Turkish Spelling & Grammar Checker'
 author: 'Denomas'
-description: 'Türkçe yazım ve dilbilgisi denetimi — 16 kural ile Plaza Türkçesi, bitişik yazım, teknik terimler ve daha fazlasını otomatik denetler.'
+description: 'Automated Turkish writing checker with 16 rules — spelling, grammar, plaza language, academic style, technical terms, idioms, and readability. Powered by Vale. | Türkçe yazım ve dilbilgisi denetimi.'
 branding:
   icon: 'check-circle'
   color: 'red'

@@ -1,10 +1,13 @@
 {
   "name": "Turkish",
-  "description": "Turkish style guide for Vale linter. Includes spelling, grammar, and style checks.",
+  "description": "Vale Turkish style package by Denomas. 16 rules covering spelling, grammar, plaza language, academic style, technical terms, idioms, and readability. Includes Hunspell dictionary.",
   "topics": [
     "writing",
     "style",
-    "turkish"
+    "turkish",
+    "spelling",
+    "grammar",
+    "linter"
   ],
   "author": "Denomas",
   "url": "https://github.com/Denomas/Turkce-yazim-denetimi"
