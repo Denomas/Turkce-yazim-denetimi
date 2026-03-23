@@ -8,57 +8,29 @@
 # 1. Türkçe karşılığı olan İngilizce terimler EKLENMEZ → Plaza.yml'ye taşınır
 # 2. Yalnızca ürün adları, evrensel kısaltmalar ve Türkçe'ye yerleşmiş terimler eklenir
 # 3. Her ekleme gerekçelendirilmelidir
+# 4. Hunspell'in zaten tanıdığı Türkçe kelimeler EKLENMEZ
 
-# ─── Türkçe Kelimeler (Hunspell sözlüğünde eksik) ────────
-# Bu kelimeler doğru Türkçe'dir ama Hunspell tanımıyor.
-# Hunspell sözlüğü genişletildiğinde buradan kaldırılacak.
+# ─── Vale Entegrasyon Workaround ──────────────────────────
+# Hunspell CLI bu kelimeleri tanıyor ama Vale'in Go binding'i tanımıyor.
+# Vale entegrasyon sorunu çözüldüğünde bu bölüm kaldırılacak.
 Akdeniz
-belgedeki
-bildiklerimizi
-birbirine
-birikimine
 Bununla
-denizlerle
-Denizlerimiz
-dildir
-dilimize
-dilimizin
-ekte
-etmektedir
-harfle
-hayata
-hazinedir
-ifadeler
-izlerini
 Karadeniz'in
-karakterini
-kelimesi
+denizlerle
+dilimizin
+hayata
 konumuyla
-konuyla
-kurallar
-listesini
-nesillere
-neticesinde
-onu
-projeler
-Sistemi
-sonucunda
-sunar
 tarihine
-terimler
-uyar
-ayarlamak
-yazılır
-yazılmıştır
 yeniden
-zamanda
 
 # ─── Ürün / Araç Adları (özel isimler, çevrilemez) ───────
 # Neden: Marka/ürün adı, Türkçe karşılığı yok
 Airflow
 Alertmanager
 ArgoCD
+Compose
 Docker
+FreeIPA
 GitHub
 GitLab
 Grafana
@@ -70,13 +42,10 @@ Nextcloud
 PostgreSQL
 Prometheus
 Redis
+Runner
 Temporal
 Terraform
 Vault
-# Neden: Ürün adlarının parçası (GitLab Runner, Docker Compose, FreeIPA)
-Compose
-FreeIPA
-Runner
 
 # ─── Evrensel Kısaltmalar (uluslararası standart) ────────
 # Neden: Tüm dillerde aynı kullanılır, Türkçe karşılığı yok
@@ -106,8 +75,8 @@ UUID
 XML
 YAML
 
-# ─── Teknik Terimler (Türkçe karşılığı olmayan, sektörde yaygın) ──
-# Neden: Yazılım terminolojisinde evrensel kullanım (false positive/negative)
+# ─── Teknik Terimler (sektörde evrensel İngilizce kullanım) ──
+# Neden: Yazılım terminolojisinde Türkçe karşılığı olmadan kullanılır
 false
 positive
 negative
@@ -118,7 +87,7 @@ konteyner
 sponsor
 
 # ─── Türkçe Kısaltmalar ─────────────────────────────────
-# Neden: Yaygın Türkçe kısaltma, sözlükte eksik
+# Neden: Yaygın Türkçe kısaltma, Hunspell sözlüğünde yok
 bkz
 vb
 vd
