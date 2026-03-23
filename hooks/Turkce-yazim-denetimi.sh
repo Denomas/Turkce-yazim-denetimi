@@ -178,7 +178,7 @@ if [ ! -d "$STYLES_PATH/Turkish" ]; then
 fi
 
 # Geçici .vale.ini oluştur
-VALE_CONFIG=$(mktemp "${TMPDIR:-/tmp}/vale-turkish.XXXXXX.ini")
+VALE_CONFIG=$(mktemp "${TMPDIR:-/tmp}/Turkce-yazim-denetimi.XXXXXX.ini")
 trap 'rm -f "$VALE_CONFIG"' EXIT
 
 # Spelling kuralını devre dışı bırakma seçeneği (CI ortamları için)

@@ -7,8 +7,8 @@ Bu proje, [Semantik Versiyonlama](https://semver.org/lang/tr/) kurallarına uyma
 ### 🔌 Entegrasyonlar
 *   **Pre-commit Desteği:** `.pre-commit-config.yaml` ile tek satırda Türkçe yazım denetimi entegrasyonu.
 *   **GitHub Actions:** Tekrar kullanılabilir composite action (`action.yml`) ile CI/CD entegrasyonu.
-*   **GitLab CI:** Include edilebilir CI şablonu (`.gitlab/vale-turkish.yml`).
-*   **Wrapper Script:** Tüm entegrasyonların temelini oluşturan `hooks/vale-turkish.sh` scripti.
+*   **GitLab CI:** Include edilebilir CI şablonu (`.gitlab/Turkce-yazim-denetimi.yml`).
+*   **Kurulum Betiği:** Tüm entegrasyonların temelini oluşturan `hooks/Turkce-yazim-denetimi.sh` betiği.
 *   **Otomatik Vale Kurulumu:** Sistemde Vale yoksa wrapper script otomatik olarak indirir (`~/.local/bin/vale`).
 
 ### 🚀 Yeni Özellikler

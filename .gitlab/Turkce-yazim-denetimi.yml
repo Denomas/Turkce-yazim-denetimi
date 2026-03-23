@@ -1,11 +1,12 @@
-# Vale Turkish - GitLab CI Şablonu
+# Türkçe Yazım Denetimi — GitLab CI Şablonu
+# Denomas (https://denomas.com)
 #
 # Kullanım:
 #   include:
-#     - remote: 'https://raw.githubusercontent.com/Denomas/Turkce-yazim-denetimi/v1.1.0/.gitlab/vale-turkish.yml'
+#     - remote: 'https://raw.githubusercontent.com/Denomas/Turkce-yazim-denetimi/v1/.gitlab/Turkce-yazim-denetimi.yml'
 #
-#   vale-turkish:
-#     extends: .vale-turkish
+#   Turkce-yazim-denetimi:
+#     extends: .Turkce-yazim-denetimi
 #     variables:
 #       VALE_FILES: "docs/"
 #       MIN_ALERT_LEVEL: "warning"
@@ -13,7 +14,7 @@
 # Docker executor için image: alpine:latest kullanılır.
 # Shell executor için sisteminizde wget/curl ve bash olmalıdır.
 
-.vale-turkish:
+.Turkce-yazim-denetimi:
   variables:
     VALE_VERSION: "3.9.0"
     MIN_ALERT_LEVEL: "suggestion"
@@ -22,7 +23,7 @@
     VALE_TURKISH_NO_SPELLING: "0"
   script:
     - |
-      # Vale'i kur (sistem, Docker veya otomatik indirme)
+      # Vale motorunu kur (sistem, Docker veya otomatik indirme)
       if command -v vale >/dev/null 2>&1; then
         echo "Vale zaten kurulu: $(vale --version)"
       elif command -v apk >/dev/null 2>&1; then
@@ -46,15 +47,13 @@
       if ! command -v vale >/dev/null 2>&1; then
         echo "Hata: Vale kurulamadı."
         exit 1
-        echo "Desteklenmeyen ortam. wget veya curl kurulu olmalıdır."
-        exit 1
       fi
 
-      # vale-turkish stillerini indir
-      wget -q "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -O vale-turkish.tar.gz || \
-        curl -fsSL "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -o vale-turkish.tar.gz
-      tar -xzf vale-turkish.tar.gz
-      STYLES_DIR="$(pwd)/$(ls -d Turkce-yazim-denetimi-*/styles 2>/dev/null || ls -d vale-turkish-*/styles 2>/dev/null)"
+      # Türkçe Yazım Denetimi stillerini indir
+      wget -q "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -O Turkce-yazim-denetimi.tar.gz || \
+        curl -fsSL "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -o Turkce-yazim-denetimi.tar.gz
+      tar -xzf Turkce-yazim-denetimi.tar.gz
+      STYLES_DIR="$(pwd)/$(ls -d Turkce-yazim-denetimi-*/styles)"
 
       # Spelling devre dışı bırakma
       SPELLING_LINE=""
@@ -75,18 +74,18 @@
         echo "[*.txt]"
         echo "BasedOnStyles = Turkish"
         [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
-      } > /tmp/vale-turkish.ini
+      } > /tmp/Turkce-yazim-denetimi.ini
 
-      # Vale'i JSON ile çalıştır ve raporları üret
+      # Vale motorunu JSON ile çalıştır ve raporları üret
       VALE_EXIT=0
-      vale --config=/tmp/vale-turkish.ini --output=JSON ${VALE_FILES} > /tmp/vale-results.json 2>/dev/null || VALE_EXIT=$?
+      vale --config=/tmp/Turkce-yazim-denetimi.ini --output=JSON ${VALE_FILES} > /tmp/vale-results.json 2>/dev/null || VALE_EXIT=$?
 
       # Sonuçları göster (insan okunur)
-      vale --config=/tmp/vale-turkish.ini ${VALE_FILES} || true
+      vale --config=/tmp/Turkce-yazim-denetimi.ini ${VALE_FILES} || true
 
       # JUnit XML raporu (GitLab Tests sekmesi)
       if command -v jq >/dev/null 2>&1 && [ -s /tmp/vale-results.json ]; then
-        SCRIPT_DIR="$(pwd)/$(ls -d Turkce-yazim-denetimi-*/scripts 2>/dev/null || ls -d vale-turkish-*/scripts 2>/dev/null)"
+        SCRIPT_DIR="$(pwd)/$(ls -d Turkce-yazim-denetimi-*/scripts)"
         if [ -f "${SCRIPT_DIR}/vale-to-junit.sh" ]; then
           bash "${SCRIPT_DIR}/vale-to-junit.sh" /tmp/vale-results.json > junit.xml 2>/dev/null || true
         fi

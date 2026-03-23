@@ -82,7 +82,7 @@ runs:
         STYLES_PATH="${ACTION_DIR}/styles"
 
         # Geçici .vale.ini oluştur
-        VALE_CONFIG=$(mktemp /tmp/vale-turkish.XXXXXX.ini)
+        VALE_CONFIG=$(mktemp /tmp/Turkce-yazim-denetimi.XXXXXX.ini)
 
         SPELLING_LINE=""
         if [ "${{ inputs.no_spelling }}" = "true" ]; then

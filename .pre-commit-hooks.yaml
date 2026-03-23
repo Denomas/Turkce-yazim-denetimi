@@ -1,7 +1,7 @@
-- id: vale-turkish
-  name: Vale Turkish (Türkçe Yazım Denetimi)
-  description: Türkçe yazım ve dilbilgisi denetimi
-  entry: hooks/vale-turkish.sh
+- id: Turkce-yazim-denetimi
+  name: Türkçe Yazım Denetimi
+  description: Türkçe yazım ve dilbilgisi denetimi — Denomas
+  entry: hooks/Turkce-yazim-denetimi.sh
   language: script
   types_or: [markdown, rst, asciidoc, html, plain-text]
   minimum_pre_commit_version: '2.9.0'

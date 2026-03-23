@@ -70,19 +70,19 @@ jobs:
 
     - name: Test hook script directly (clean)
       run: |
-        VALE_TURKISH_NO_SPELLING=1 ./hooks/vale-turkish.sh fixtures/clean.md
+        VALE_TURKISH_NO_SPELLING=1 ./hooks/Turkce-yazim-denetimi.sh fixtures/clean.md
 
     - name: Test hook script directly (dirty - should fail)
       run: |
-        VALE_TURKISH_NO_SPELLING=1 ./hooks/vale-turkish.sh fixtures/dirty.md && exit 1 || echo "Basarili: dirty.md'de hatalar bulundu"
+        VALE_TURKISH_NO_SPELLING=1 ./hooks/Turkce-yazim-denetimi.sh fixtures/dirty.md && exit 1 || echo "Basarili: dirty.md'de hatalar bulundu"
 
     - name: Test pre-commit hook (clean)
       run: |
-        VALE_TURKISH_NO_SPELLING=1 pre-commit try-repo . vale-turkish --files fixtures/clean.md
+        VALE_TURKISH_NO_SPELLING=1 pre-commit try-repo . Turkce-yazim-denetimi --files fixtures/clean.md
 
     - name: Test pre-commit hook (dirty - should fail)
       run: |
-        VALE_TURKISH_NO_SPELLING=1 pre-commit try-repo . vale-turkish --files fixtures/dirty.md && exit 1 || echo "Basarili: pre-commit hook hatalari yakaladi"
+        VALE_TURKISH_NO_SPELLING=1 pre-commit try-repo . Turkce-yazim-denetimi --files fixtures/dirty.md && exit 1 || echo "Basarili: pre-commit hook hatalari yakaladi"
 
   test-action:
     strategy:

@@ -20,7 +20,7 @@ Amacımız, yazılımcıların ve içerik üreticilerinin **"Plaza Türkçesi"**
 Türkçe içerik üretiminde yazım, dilbilgisi ve stil tutarlılığını sağlamak zordur. Özellikle yazılım ve teknoloji sektöründe, İngilizce terimlerin yoğun kullanımı "Plaza Türkçesi" gibi hibrit bir dil yapısı oluşturmaktadır. Mevcut araçlar (yazım denetleyicileri) genellikle genel dilbilgisi kurallarına odaklanırken, sektöre özgü ve stilistik sorunları çözmede yetersiz kalmaktadır. Bu durum, dokümantasyon kalitesini düşürmekte, yanlış anlaşılmalara yol açmakta ve marka imajını zayıflatmaktadır.
 
 ## 4. İsimlendirme Standartları
-*   **GitHub Repo Adı:** `vale-turkish`
+*   **GitHub Repo Adı:** `Turkce-yazim-denetimi`
 *   **Vale Paket Adı:** `Turkish`
 *   **Konfigürasyon Kullanımı:** `Packages = Turkish` (meta.json dosyasında tanımlanan isim)
 
@@ -54,7 +54,7 @@ Bu fazda repoyu "basit bir yazım denetleyicisi" olmaktan çıkarıp "stil rehbe
 ### Faz 5: Ekosistem Genişletme ve Otomasyon (Yeni Vizyon 🚀)
 Bu fazda projeyi bir yazılım aracından çıkarıp, Türkçenin dijital ekosistemine dönüştüreceğiz.
 *   **Sektörel Stil Paketleri:** Hukuk (Ağır terminoloji sadeleştirme), Akademik (Makale/Tez yazım standartları) ve Kamu dili için özel modüllerin eklenmesi.
-*   **`vale-turkish fix` CLI:** Bariz yazım hatalarını döküman genelinde tek komutla otomatik düzelten bir araç/script geliştirilmesi.
+*   **`Turkce-yazim-denetimi fix` CLI:** Bariz yazım hatalarını döküman genelinde tek komutla otomatik düzelten bir araç/script geliştirilmesi.
 *   **Eğitici Bilgi Kartları:** Kural mesajlarının TDK veya dilbilim kaynaklı açıklayıcı linklerle zenginleştirilerek projeye eğitim kimliği kazandırılması.
 *   **Web ve Tarayıcı Entegrasyonu:** Geliştirici olmayanlar için çevrimiçi metin editörü ve Chrome/Firefox eklentisi (LinkedIn, Gmail desteği) geliştirilmesi.
 *   **Kalite Rozeti (Badge):** Projelerin Türkçe hassasiyetini ödüllendiren ve README dosyalarına eklenebilen dinamik "Turkish Quality" rozetleri.
@@ -67,7 +67,7 @@ Bu fazda projeyi bir yazılım aracından çıkarıp, Türkçenin dijital ekosis
 
 ### Klasör Yapısı (Hedef)
 ```text
-vale-turkish/
+Turkce-yazim-denetimi/
 ├── .github/                # GitHub Actions Workflows
 │   ├── workflows/
 │   │   ├── test.yml        # CI testleri

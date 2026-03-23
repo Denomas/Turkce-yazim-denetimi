@@ -61,7 +61,7 @@ repos:
   - repo: https://github.com/Denomas/Turkce-yazim-denetimi
     rev: v1
     hooks:
-      - id: vale-turkish
+      - id: Turkce-yazim-denetimi
 ```
 
 **Adım 3.** Hook'u etkinleştirin:
@@ -82,7 +82,7 @@ git commit -m "test"
 
 ```
 Vale Turkish (Türkçe Yazım Denetimi)....Failed
-- hook id: vale-turkish
+- hook id: Turkce-yazim-denetimi
 
  test.md
  1:1   error  📝 'bir şey' kullanın ('birşey' yerine)   Turkish.BitisikYazim
@@ -280,11 +280,11 @@ Projenizde hem Türkçe hem İngilizce belgeler varsa, Türkçe Yazım Denetimi'
 
 ```yaml
 # Yalnızca docs/tr/ altındaki dosyalar
-- id: vale-turkish
+- id: Turkce-yazim-denetimi
   files: ^docs/tr/
 
 # Birden fazla dizin veya .tr.md uzantılı dosyalar
-- id: vale-turkish
+- id: Turkce-yazim-denetimi
   files: (^docs/tr/|^content/turkce/|\.tr\.md$)
 ```
 
@@ -299,8 +299,8 @@ Projenizde hem Türkçe hem İngilizce belgeler varsa, Türkçe Yazım Denetimi'
 **GitLab CI ile** — `VALE_FILES` değişkenini ayarlayın:
 
 ```yaml
-vale-turkish:
-  extends: .vale-turkish
+Turkce-yazim-denetimi:
+  extends: .Turkce-yazim-denetimi
   variables:
     VALE_FILES: "docs/tr/"
 ```
@@ -323,7 +323,7 @@ Türkçe Yazım Denetimi'nin 3 uyarı seviyesi vardır. Hangilerini görmek iste
 
 ```yaml
 # Pre-commit
-- id: vale-turkish
+- id: Turkce-yazim-denetimi
   args: [--minAlertLevel=error]
 ```
 
@@ -373,7 +373,7 @@ on:
     branches: [main]
 
 jobs:
-  vale-turkish:
+  Turkce-yazim-denetimi:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -389,10 +389,10 @@ jobs:
 
 ```yaml
 include:
-  - remote: 'https://raw.githubusercontent.com/Denomas/Turkce-yazim-denetimi/v1.1.0/.gitlab/vale-turkish.yml'
+  - remote: 'https://raw.githubusercontent.com/Denomas/Turkce-yazim-denetimi/v1.1.0/.gitlab/Turkce-yazim-denetimi.yml'
 
-vale-turkish:
-  extends: .vale-turkish
+Turkce-yazim-denetimi:
+  extends: .Turkce-yazim-denetimi
   variables:
     VALE_FILES: "docs/"
     MIN_ALERT_LEVEL: "warning"
@@ -454,7 +454,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 - repo: https://github.com/Denomas/Turkce-yazim-denetimi
   rev: v1
   hooks:
-    - id: vale-turkish
+    - id: Turkce-yazim-denetimi
       args: [--minAlertLevel=error]   # Vale CLI argümanları
       files: ^docs/tr/                # Regex: hangi dosyalara uygulanacak
       types: [markdown]               # Dosya tipi (varsayılan: markdown)
@@ -526,9 +526,9 @@ Turkce-yazim-denetimi/
 ├── .pre-commit-hooks.yaml          # Pre-commit hook tanımı
 ├── action.yml                      # GitHub Actions composite action
 ├── .gitlab/
-│   └── vale-turkish.yml            # GitLab CI şablonu
+│   └── Turkce-yazim-denetimi.yml   # GitLab CI şablonu
 ├── hooks/
-│   └── vale-turkish.sh             # Kurulum ve çalıştırma betiği
+│   └── Turkce-yazim-denetimi.sh             # Kurulum ve çalıştırma betiği
 ├── .vale.ini                       # Örnek yapılandırma
 ├── install.sh                      # Kurulum scripti (macOS/Linux)
 ├── install.ps1                     # Kurulum scripti (Windows)
