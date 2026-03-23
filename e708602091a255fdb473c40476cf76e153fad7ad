@@ -1,0 +1,69 @@
+belgeler/en/getting-started.md
+  1d815db16820323f 1-87
+belgeler/en/rules.md
+  1d815db16820323f 1-55
+belgeler/index.md
+  1d815db16820323f 1-78
+mkdocs.yml
+  1d815db16820323f 1-99
+belgeler/tr/hakkinda/mimari.md
+  1d815db16820323f 1-46
+belgeler/tr/kullanim/pre-commit.md
+  1d815db16820323f 1-64
+belgeler/tr/baslangic/kurulum.md
+  1d815db16820323f 1-82
+belgeler/en/index.md
+  1d815db16820323f 1-58
+belgeler/en/contributing.md
+  1d815db16820323f 1-50
+.gitignore
+  1d815db16820323f 13
+belgeler/tr/baslangic/vs-code.md
+  1d815db16820323f 1-17
+belgeler/tr/katki/fork-is-akisi.md
+  1d815db16820323f 1-86
+README.md
+  1d815db16820323f 11-12
+belgeler/tr/katki/yeni-kural-ekleme.md
+  1d815db16820323f 1-54
+belgeler/en/use-cases.md
+  1d815db16820323f 1-80
+belgeler/tr/katki/gelistirme-ortami.md
+  1d815db16820323f 1-60
+belgeler/tr/kullanim/github-actions.md
+  1d815db16820323f 1-55
+belgeler/tr/kullanim/yapilandirma.md
+  1d815db16820323f 1-69
+belgeler/tr/baslangic/ilk-adimlar.md
+  1d815db16820323f 1-57
+belgeler/tr/kurallar/index.md
+  1d815db16820323f 1-56
+.github/workflows/docs.yml
+  1d815db16820323f 1-46
+belgeler/en/usage.md
+  1d815db16820323f 1-74
+belgeler/tr/kullanim/gitlab-ci.md
+  1d815db16820323f 1-40
+belgeler/tr/hakkinda/felsefe.md
+  1d815db16820323f 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "e708602091a255fdb473c40476cf76e153fad7ad",
+  "prompts": {
+    "1d815db16820323f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be17d1d5-b85b-442f-8fb0-a279c748dda5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 1353,
+      "total_deletions": 2,
+      "accepted_lines": 1351,
+      "overriden_lines": 0
+    }
+  }
+}
