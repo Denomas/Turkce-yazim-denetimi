@@ -2,6 +2,25 @@
 
 Bu proje, [Semantik Versiyonlama](https://semver.org/lang/tr/) kurallarına uymaya çalışır.
 
+## [1.3.0](https://github.com/Denomas/Turkce-yazim-denetimi/compare/v1.2.0...v1.3.0) (2026-03-23)
+
+
+### Yeni Özellikler
+
+* accept.txt genişletildi — 100+ teknik terim eklendi ([98a0b82](https://github.com/Denomas/Turkce-yazim-denetimi/commit/98a0b82878f31a6913586f91286f454b985a1de5))
+* tam otomatik release pipeline + geliştirici iş akışı belgeleri ([#1](https://github.com/Denomas/Turkce-yazim-denetimi/issues/1)) ([e90d263](https://github.com/Denomas/Turkce-yazim-denetimi/commit/e90d26381d3b5c893eaf9b18f565144f10f5f79d))
+
+
+### Düzeltmeler
+
+* Teknik.yml substring false positive düzeltildi, mktemp çakışması giderildi ([28381ab](https://github.com/Denomas/Turkce-yazim-denetimi/commit/28381ab8f2fc546d0698d1e7ce49c03512ea6d0b))
+
+
+### İyileştirmeler
+
+* accept.txt sadeleştirildi — yalnızca zorunlu terimler kaldı ([b25719a](https://github.com/Denomas/Turkce-yazim-denetimi/commit/b25719a5872107af3aaacc7507ad073cb54f0a2c))
+* Vale versiyonunu tek kaynaktan yönet (.github/vale-version) ([876d703](https://github.com/Denomas/Turkce-yazim-denetimi/commit/876d703ee6714c480557a5887cec6d3613c912f2))
+
 ## v1.2.0
 
 ### 🐛 Düzeltmeler
