@@ -1,0 +1,74 @@
+name: 'Vale Turkish Linter'
+description: 'Türkçe yazım ve dilbilgisi denetimi (Vale style paketi)'
+branding:
+  icon: 'check-circle'
+  color: 'red'
+
+inputs:
+  files:
+    description: 'Denetlenecek dosyalar veya glob deseni'
+    required: false
+    default: '.'
+  min_alert_level:
+    description: 'Minimum uyarı seviyesi (suggestion, warning, error)'
+    required: false
+    default: 'suggestion'
+  vale_version:
+    description: 'Kurulacak Vale sürümü'
+    required: false
+    default: '3.9.0'
+  reporter:
+    description: 'Çıktı formatı (CLI, JSON, line, vb.)'
+    required: false
+    default: 'CLI'
+  no_spelling:
+    description: 'Yazım denetimini devre dışı bırak (Hunspell bağımlılığı olmadan çalıştırmak için)'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Vale kur
+      shell: bash
+      run: |
+        VALE_VERSION="${{ inputs.vale_version }}"
+        wget -q "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+        tar -xzf "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+        sudo mv vale /usr/local/bin/
+        rm -f "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+        vale --version
+
+    - name: Türkçe kurallarla denetle
+      shell: bash
+      run: |
+        ACTION_DIR="${{ github.action_path }}"
+        STYLES_PATH="${ACTION_DIR}/styles"
+
+        # Geçici .vale.ini oluştur
+        VALE_CONFIG=$(mktemp /tmp/vale-turkish.XXXXXX.ini)
+
+        SPELLING_LINE=""
+        if [ "${{ inputs.no_spelling }}" = "true" ]; then
+          SPELLING_LINE="Turkish.Spelling = NO"
+        fi
+
+        cat > "$VALE_CONFIG" <<EOF
+        StylesPath = ${STYLES_PATH}
+        MinAlertLevel = ${{ inputs.min_alert_level }}
+        Vocab = Turkish
+
+        [*.md]
+        BasedOnStyles = Turkish
+        ${SPELLING_LINE}
+
+        [*.txt]
+        BasedOnStyles = Turkish
+        ${SPELLING_LINE}
+        EOF
+
+        vale --config="$VALE_CONFIG" \
+             --output="${{ inputs.reporter }}" \
+             ${{ inputs.files }}
+
+        rm -f "$VALE_CONFIG"

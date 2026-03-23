@@ -1,0 +1,55 @@
+# Vale Turkish - GitLab CI Şablonu
+#
+# Kullanım:
+#   include:
+#     - remote: 'https://raw.githubusercontent.com/tolgakaratas/vale-turkish/v1.1.0/.gitlab/vale-turkish.yml'
+#
+#   vale-turkish:
+#     extends: .vale-turkish
+#     variables:
+#       VALE_FILES: "docs/"
+#       MIN_ALERT_LEVEL: "warning"
+
+.vale-turkish:
+  image: alpine:latest
+  variables:
+    VALE_VERSION: "3.9.0"
+    MIN_ALERT_LEVEL: "suggestion"
+    VALE_FILES: "."
+    VALE_TURKISH_VERSION: "v1.1.0"
+    VALE_TURKISH_NO_SPELLING: "0"
+  before_script:
+    - apk add --no-cache wget bash tar
+    - wget -q "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+    - tar -xzf "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+    - mv vale /usr/local/bin/
+    - rm -f "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+  script:
+    - |
+      # vale-turkish stillerini indir
+      wget -q "https://github.com/tolgakaratas/vale-turkish/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -O vale-turkish.tar.gz
+      tar -xzf vale-turkish.tar.gz
+      STYLES_DIR="$(pwd)/vale-turkish-${VALE_TURKISH_VERSION#v}/styles"
+
+      # Spelling devre dışı bırakma
+      SPELLING_LINE=""
+      if [ "${VALE_TURKISH_NO_SPELLING}" = "1" ]; then
+        SPELLING_LINE="Turkish.Spelling = NO"
+      fi
+
+      # Geçici config oluştur
+      cat > /tmp/vale-turkish.ini <<EOF
+      StylesPath = ${STYLES_DIR}
+      MinAlertLevel = ${MIN_ALERT_LEVEL}
+      Vocab = Turkish
+
+      [*.md]
+      BasedOnStyles = Turkish
+      ${SPELLING_LINE}
+
+      [*.txt]
+      BasedOnStyles = Turkish
+      ${SPELLING_LINE}
+      EOF
+
+      vale --config=/tmp/vale-turkish.ini ${VALE_FILES}

@@ -49,3 +49,46 @@ jobs:
           echo "Success: Vale correctly identified errors in dirty.md"
           exit 0
         fi
+
+  test-precommit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Vale
+      run: |
+        wget -q https://github.com/errata-ai/vale/releases/download/v3.9.0/vale_3.9.0_Linux_64-bit.tar.gz
+        tar -xzf vale_3.9.0_Linux_64-bit.tar.gz
+        sudo mv vale /usr/local/bin/
+
+    - name: Install pre-commit
+      run: pip install pre-commit
+
+    - name: Test hook script directly (clean)
+      run: |
+        VALE_TURKISH_NO_SPELLING=1 ./hooks/vale-turkish.sh fixtures/clean.md
+
+    - name: Test hook script directly (dirty - should fail)
+      run: |
+        VALE_TURKISH_NO_SPELLING=1 ./hooks/vale-turkish.sh fixtures/dirty.md && exit 1 || echo "Basarili: dirty.md'de hatalar bulundu"
+
+    - name: Test pre-commit hook (clean)
+      run: |
+        VALE_TURKISH_NO_SPELLING=1 pre-commit try-repo . vale-turkish --files fixtures/clean.md
+
+    - name: Test pre-commit hook (dirty - should fail)
+      run: |
+        VALE_TURKISH_NO_SPELLING=1 pre-commit try-repo . vale-turkish --files fixtures/dirty.md && exit 1 || echo "Basarili: pre-commit hook hatalari yakaladi"
+
+  test-action:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Test GitHub Action (clean)
+      uses: ./
+      with:
+        files: fixtures/clean.md
+        no_spelling: 'true'
