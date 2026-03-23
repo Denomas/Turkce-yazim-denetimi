@@ -1,48 +1,155 @@
-# Kabul Edilen Türkçe Kelimeler
+# Kabul Edilen Kelimeler — Vale Türkçe Yazım Denetimi
 # Bu kelimeler Vale'nin Türkçe yazım denetiminde hata olarak işaretlenmeyecektir.
+# Hem Türkçe teknik dokümantasyonda sıkça kullanılan İngilizce terimler
+# hem de Hunspell sözlüğünde eksik olan Türkçe kelimeler burada yer alır.
 
-# Temel Kelimeler
+# ─── Türkçe Kelimeler (Hunspell'de eksik) ────────────────
+Akdeniz
 belgedeki
-uyar
-kurallar
-yazılmıştır
-ayarlamak
-ifadeler
-yazılır
-harfle
-kelimesi
-terimler
-
-# Clean.md İçeriği (Özel İsimler ve Nadir Çekimler)
-dildir
-izlerini
-dilimizin
-tarihine
 bildiklerimizi
-Sistemi
-hayata
-Denizlerimiz
+birbirine
+birikimine
+Bununla
 denizlerle
-konumuyla
+Denizlerimiz
+dildir
+dilimize
+dilimizin
+ekte
+etmektedir
+harfle
+hayata
+hazinedir
+ifadeler
+izlerini
 Karadeniz'in
 karakterini
-Akdeniz
-sunar
-birbirine
-onu
-dilimize
-nesillere
-projeler
-birikimine
-hazinedir
-zamanda
-etmektedir
-neticesinde
+kelimesi
+konumuyla
 konuyla
-ekte
-
-# Spelling False Positive Düzeltmeleri
-sonucunda
-Bununla
+kurallar
 listesini
+nesillere
+neticesinde
+onu
+projeler
+Sistemi
+sonucunda
+sunar
+tarihine
+terimler
+uyar
+ayarlamak
+yazılır
+yazılmıştır
 yeniden
+zamanda
+
+# ─── Kısaltmalar ─────────────────────────────────────────
+bkz
+ms
+vb
+vd
+
+# ─── DevOps / Altyapı Araçları ───────────────────────────
+Airflow
+Alertmanager
+ArgoCD
+Docker
+Grafana
+Helm
+Jenkins
+Kubernetes
+Loki
+Prometheus
+Redis
+Temporal
+Terraform
+Vault
+
+# ─── Güvenlik / Uyumluluk Terimleri ──────────────────────
+Audit
+Breach
+Commander
+Compliance
+Containment
+Eradication
+Executive
+Forensics
+Incident
+Playbook
+Postmortem
+Runbook
+Threat
+Triage
+Vulnerability
+
+# ─── Yazılım Terimleri ──────────────────────────────────
+API
+CLI
+Container
+Dashboard
+Endpoint
+GraphQL
+Microservice
+Middleware
+Orchestrator
+Pipeline
+Protobuf
+REST
+Runtime
+SDK
+WebSocket
+Webhook
+
+# ─── Roller ──────────────────────────────────────────────
+Analyst
+Auditor
+Engineer
+Lead
+Manager
+Officer
+Owner
+Sponsor
+Stakeholder
+
+# ─── Genel IT Terimleri ──────────────────────────────────
+Backup
+Deployment
+Downtime
+Failover
+KPI
+Latency
+Monitoring
+Recovery
+Resilience
+ROI
+Rollback
+SLA
+Scaling
+Throughput
+Uptime
+
+# ─── Ürün / Marka İsimleri ──────────────────────────────
+Apple
+Microsoft
+Nextcloud
+Wiki
+
+# ─── Küçük harfli yaygın terimler ────────────────────────
+admin
+approved
+backup
+dashboard
+deployment
+deprecated
+draft
+endpoint
+failover
+middleware
+monitoring
+pipeline
+proposed
+rollback
+runtime
+webhook
