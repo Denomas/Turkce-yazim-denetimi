@@ -1,9 +1,17 @@
 # Kabul Edilen Kelimeler — Vale Türkçe Yazım Denetimi
-# Bu kelimeler Vale'nin Türkçe yazım denetiminde hata olarak işaretlenmeyecektir.
-# Hem Türkçe teknik dokümantasyonda sıkça kullanılan İngilizce terimler
-# hem de Hunspell sözlüğünde eksik olan Türkçe kelimeler burada yer alır.
+#
+# DİKKAT: Bu listeye kelime eklemeden önce şu soruyu sor:
+# "Bu kelimeyi birisi yanlış kullanırsa sistem sessiz mi kalacak?"
+# Cevap evet ise EKLEME.
+#
+# İlkeler:
+# 1. Türkçe karşılığı olan İngilizce terimler EKLENMEZ → Plaza.yml'ye taşınır
+# 2. Yalnızca ürün adları, evrensel kısaltmalar ve Türkçe'ye yerleşmiş terimler eklenir
+# 3. Her ekleme gerekçelendirilmelidir
 
-# ─── Türkçe Kelimeler (Hunspell'de eksik) ────────────────
+# ─── Türkçe Kelimeler (Hunspell sözlüğünde eksik) ────────
+# Bu kelimeler doğru Türkçe'dir ama Hunspell tanımıyor.
+# Hunspell sözlüğü genişletildiğinde buradan kaldırılacak.
 Akdeniz
 belgedeki
 bildiklerimizi
@@ -45,111 +53,62 @@ yazılmıştır
 yeniden
 zamanda
 
-# ─── Kısaltmalar ─────────────────────────────────────────
-bkz
-ms
-vb
-vd
-
-# ─── DevOps / Altyapı Araçları ───────────────────────────
+# ─── Ürün / Araç Adları (özel isimler, çevrilemez) ───────
+# Neden: Marka/ürün adı, Türkçe karşılığı yok
 Airflow
 Alertmanager
 ArgoCD
 Docker
+GitHub
+GitLab
 Grafana
 Helm
 Jenkins
 Kubernetes
 Loki
+Nextcloud
+PostgreSQL
 Prometheus
 Redis
 Temporal
 Terraform
 Vault
 
-# ─── Güvenlik / Uyumluluk Terimleri ──────────────────────
-Audit
-Breach
-Commander
-Compliance
-Containment
-Eradication
-Executive
-Forensics
-Incident
-Playbook
-Postmortem
-Runbook
-Threat
-Triage
-Vulnerability
-
-# ─── Yazılım Terimleri ──────────────────────────────────
+# ─── Evrensel Kısaltmalar (uluslararası standart) ────────
+# Neden: Tüm dillerde aynı kullanılır, Türkçe karşılığı yok
 API
 CLI
-Container
-Dashboard
-Endpoint
+CPU
+CSS
+DNS
+FTP
+GPU
 GraphQL
-Microservice
-Middleware
-Orchestrator
-Pipeline
-Protobuf
-REST
-Runtime
-SDK
-WebSocket
-Webhook
-
-# ─── Roller ──────────────────────────────────────────────
-Analyst
-Auditor
-Engineer
-Lead
-Manager
-Officer
-Owner
-Sponsor
-Stakeholder
-
-# ─── Genel IT Terimleri ──────────────────────────────────
-Backup
-Deployment
-Downtime
-Failover
+HTML
+HTTP
+HTTPS
+JSON
 KPI
-Latency
-Monitoring
-Recovery
-Resilience
+REST
 ROI
-Rollback
+SDK
 SLA
-Scaling
-Throughput
-Uptime
+SQL
+SSH
+SSL
+TLS
+URL
+UUID
+XML
+YAML
 
-# ─── Ürün / Marka İsimleri ──────────────────────────────
-Apple
-Microsoft
-Nextcloud
-Wiki
+# ─── Türkçe'ye Yerleşmiş Yabancı Terimler ───────────────
+# Neden: TDK tarafından kabul edilmiş veya yaygın kullanıma girmiş
+konteyner
+sponsor
 
-# ─── Küçük harfli yaygın terimler ────────────────────────
-admin
-approved
-backup
-dashboard
-deployment
-deprecated
-draft
-endpoint
-failover
-middleware
-monitoring
-pipeline
-proposed
-rollback
-runtime
-webhook
+# ─── Türkçe Kısaltmalar ─────────────────────────────────
+# Neden: Yaygın Türkçe kısaltma, sözlükte eksik
+bkz
+vb
+vd
