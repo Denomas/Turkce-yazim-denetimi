@@ -37,7 +37,6 @@ swap:
   NextJS: Next.js
   Nuxtjs: Nuxt.js
   Svelte: Svelte
-  Tailwind: Tailwind CSS
   Bootstrap: Bootstrap
   Jquery: jQuery
   Html: HTML
@@ -104,7 +103,6 @@ swap:
   Vscode: VS Code
   VsCode: VS Code
   VSC: VS Code
-  Sublime: Sublime Text
   Intellij: IntelliJ IDEA
   Eclipse: Eclipse
   Vim: Vim
