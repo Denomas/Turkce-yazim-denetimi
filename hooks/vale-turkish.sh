@@ -195,7 +195,23 @@ Vocab = Turkish
 BasedOnStyles = Turkish
 ${SPELLING_LINE}
 
+[*.rst]
+BasedOnStyles = Turkish
+${SPELLING_LINE}
+
+[*.adoc]
+BasedOnStyles = Turkish
+${SPELLING_LINE}
+
+[*.html]
+BasedOnStyles = Turkish
+${SPELLING_LINE}
+
 [*.txt]
+BasedOnStyles = Turkish
+${SPELLING_LINE}
+
+[*.org]
 BasedOnStyles = Turkish
 ${SPELLING_LINE}
 EOF

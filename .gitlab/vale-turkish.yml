@@ -2,7 +2,7 @@
 #
 # Kullanım:
 #   include:
-#     - remote: 'https://raw.githubusercontent.com/tolgakaratas/vale-turkish/v1.1.0/.gitlab/vale-turkish.yml'
+#     - remote: 'https://raw.githubusercontent.com/Denomas/Turkce-yazim-denetimi/v1.1.0/.gitlab/vale-turkish.yml'
 #
 #   vale-turkish:
 #     extends: .vale-turkish
@@ -51,8 +51,8 @@
       fi
 
       # vale-turkish stillerini indir
-      wget -q "https://github.com/tolgakaratas/vale-turkish/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -O vale-turkish.tar.gz || \
-        curl -fsSL "https://github.com/tolgakaratas/vale-turkish/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -o vale-turkish.tar.gz
+      wget -q "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -O vale-turkish.tar.gz || \
+        curl -fsSL "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -o vale-turkish.tar.gz
       tar -xzf vale-turkish.tar.gz
       STYLES_DIR="$(pwd)/vale-turkish-${VALE_TURKISH_VERSION#v}/styles"
 

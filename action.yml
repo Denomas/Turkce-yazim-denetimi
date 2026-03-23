@@ -1,5 +1,5 @@
 name: 'Vale Turkish Linter'
-author: 'tolgakaratas'
+author: 'Denomas'
 description: 'Türkçe yazım ve dilbilgisi denetimi — 16 kural ile Plaza Türkçesi, bitişik yazım, teknik terimler ve daha fazlasını otomatik denetler.'
 branding:
   icon: 'check-circle'
@@ -93,14 +93,12 @@ runs:
           echo "StylesPath = ${STYLES_PATH}"
           echo "MinAlertLevel = ${{ inputs.min_alert_level }}"
           echo "Vocab = Turkish"
-          echo ""
-          echo "[*.md]"
-          echo "BasedOnStyles = Turkish"
-          [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
-          echo ""
-          echo "[*.txt]"
-          echo "BasedOnStyles = Turkish"
-          [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
+          for ext in md rst adoc html txt org; do
+            echo ""
+            echo "[*.${ext}]"
+            echo "BasedOnStyles = Turkish"
+            [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
+          done
         } > "$VALE_CONFIG"
 
         # jq varsa görsel rapor üret, yoksa düz vale çalıştır

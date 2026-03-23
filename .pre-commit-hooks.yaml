@@ -3,5 +3,5 @@
   description: Türkçe yazım ve dilbilgisi denetimi
   entry: hooks/vale-turkish.sh
   language: script
-  types: [markdown]
+  types_or: [markdown, rst, asciidoc, html, plain-text]
   minimum_pre_commit_version: '2.9.0'

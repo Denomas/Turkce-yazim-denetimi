@@ -2,11 +2,11 @@
 
 ![Vale Turkish Banner](assets/banner.svg)
 
-[![Test](https://github.com/tolgakaratas/vale-turkish/actions/workflows/test.yml/badge.svg)](https://github.com/tolgakaratas/vale-turkish/actions/workflows/test.yml)
+[![Test](https://github.com/Denomas/Turkce-yazim-denetimi/actions/workflows/test.yml/badge.svg)](https://github.com/Denomas/Turkce-yazim-denetimi/actions/workflows/test.yml)
 [![Vale](https://img.shields.io/badge/vale-3.x-blue.svg)](https://vale.sh)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Turkish](https://img.shields.io/badge/lang-T%C3%BCrk%C3%A7e-red.svg)](README.md)
-[![GitHub Release](https://img.shields.io/github/v/release/tolgakaratas/vale-turkish)](https://github.com/tolgakaratas/vale-turkish/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/Denomas/Turkce-yazim-denetimi)](https://github.com/Denomas/Turkce-yazim-denetimi/releases)
 
 **"Birşey" mi yazılır yoksa "bir şey" mi? "Herkez" mi "herkes" mi? Artık dert etmenize gerek yok!**
 
@@ -57,7 +57,7 @@ pip install pre-commit
 
 ```yaml
 repos:
-  - repo: https://github.com/tolgakaratas/vale-turkish
+  - repo: https://github.com/Denomas/Turkce-yazim-denetimi
     rev: v1
     hooks:
       - id: vale-turkish
@@ -173,7 +173,7 @@ vale --version
 
 ```bash
 # Projeyi indirin
-git clone https://github.com/tolgakaratas/vale-turkish.git
+git clone https://github.com/Denomas/Turkce-yazim-denetimi.git
 cd vale-turkish
 ```
 
@@ -290,7 +290,7 @@ Projenizde hem Türkçe hem İngilizce belgeler varsa, vale-turkish'i yalnızca 
 **GitHub Actions ile** — `files` girdisini kullanın:
 
 ```yaml
-- uses: tolgakaratas/vale-turkish@v1
+- uses: Denomas/Turkce-yazim-denetimi@v1
   with:
     files: 'docs/tr/'
 ```
@@ -376,7 +376,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: tolgakaratas/vale-turkish@v1
+      - uses: Denomas/Turkce-yazim-denetimi@v1
         with:
           files: '.'
           min_alert_level: 'error'
@@ -388,7 +388,7 @@ jobs:
 
 ```yaml
 include:
-  - remote: 'https://raw.githubusercontent.com/tolgakaratas/vale-turkish/v1.1.0/.gitlab/vale-turkish.yml'
+  - remote: 'https://raw.githubusercontent.com/Denomas/Turkce-yazim-denetimi/v1.1.0/.gitlab/vale-turkish.yml'
 
 vale-turkish:
   extends: .vale-turkish
@@ -415,6 +415,17 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 
 > Eksiksiz teknik bilgi. Parametreler, kurallar ve yapılandırma seçenekleri.
 
+### Desteklenen dosya formatları
+
+| Format | Uzantı | Açıklama |
+|--------|--------|----------|
+| Markdown | `.md` | GitHub, GitLab, dokümantasyon siteleri |
+| reStructuredText | `.rst` | Sphinx, Python dokümantasyonu |
+| AsciiDoc | `.adoc` | Teknik kitaplar, Red Hat dokümantasyonu |
+| HTML | `.html` | Web sayfaları, e-posta şablonları |
+| Düz metin | `.txt` | Genel metin dosyaları |
+| Org Mode | `.org` | Emacs org-mode dosyaları |
+
 ### Kural listesi
 
 | Kural | Tür | Açıklama | Seviye |
@@ -439,7 +450,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 ### Pre-commit hook seçenekleri
 
 ```yaml
-- repo: https://github.com/tolgakaratas/vale-turkish
+- repo: https://github.com/Denomas/Turkce-yazim-denetimi
   rev: v1
   hooks:
     - id: vale-turkish
