@@ -1,0 +1,37 @@
+CHANGELOG.md
+  1d815db16820323f 10-11
+.github/workflows/test.yml
+  1d815db16820323f 73,77,81,85
+README.md
+  1d815db16820323f 64,85,283,287,302-303,326,376,392,394-395,457,529,531
+hooks/Turkce-yazim-denetimi.sh
+  1d815db16820323f 181
+.gitlab/Turkce-yazim-denetimi.yml
+  1d815db16820323f 1-2,6,8-9,17,26,52-56,77,79,81,84,88
+.pre-commit-hooks.yaml
+  1d815db16820323f 1-4
+PRD.md
+  1d815db16820323f 23,57,70
+action.yml
+  1d815db16820323f 85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "28ece2199ab3c155939697b20a65ab77be8b4143",
+  "prompts": {
+    "1d815db16820323f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be17d1d5-b85b-442f-8fb0-a279c748dda5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 46,
+      "total_deletions": 47,
+      "accepted_lines": 46,
+      "overriden_lines": 0
+    }
+  }
+}
