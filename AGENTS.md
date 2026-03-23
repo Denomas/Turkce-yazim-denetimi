@@ -76,6 +76,21 @@ Bu projedeki her geliştirme, şu adımları otomaitk bir refleks olarak takip e
 *   **Mesajlar:** Emoji ile başla, nazik ol. (`📝`, `⚠️`, `💡`)
 *   **Teknik Detaylar:** Daha fazla bilgi için [KATKIDA_BULUNMA.md](KATKIDA_BULUNMA.md) dosyasına bakın.
 
+### 📌 Commit Prefix Kuralı (KESİN KURAL)
+
+> **Mevcut bir kurala veri eklemek (kelime, terim, swap girişi) yeni bir özellik DEĞİLDİR.**
+> `feat:` yalnızca yeni mekanizma veya kural dosyası eklendiğinde kullanılır.
+
+| Değişiklik | Prefix | Versiyon |
+|---|---|---|
+| Yeni `.yml` kural dosyası | `feat:` | Minor |
+| Mevcut kurala kelime/terim ekleme | `fix:` | Patch |
+| False positive düzeltme | `fix:` | Patch |
+| Kural silme / yeniden adlandırma | `feat!:` | Major |
+| Döküman, CI, bakım | `docs:/ci:/chore:` | Release yok |
+
+⛔ **Bu kural istisnasızdır.** Yanlış prefix gereksiz versiyon artışına neden olur.
+
 ### 🚦 Yayınlama Kapısı (Release Gate)
 Testlerden geçmeyen hiçbir değişiklik asla yayınlanamaz. Bu kural istisnasızdır.
 

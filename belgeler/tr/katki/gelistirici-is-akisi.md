@@ -172,6 +172,34 @@ Her PR başlığı şu prefix'lerden biriyle başlamalıdır:
 | `ci:` | CI/CD değişikliği | Release yok |
 | `feat!:` | Kırıcı değişiklik | Major versiyon |
 
+### Prefix Seçim Kuralı (KRİTİK)
+
+> **Mevcut bir kurala veri eklemek (kelime, terim, swap girişi) yeni bir özellik DEĞİLDİR.**
+
+Bu ayrım versiyon numarasını doğrudan etkiler. Yanlış prefix gereksiz versiyon artışına neden olur.
+
+| Değişiklik | Doğru prefix | Neden |
+|---|---|---|
+| Yeni `.yml` kural dosyası oluşturma | `feat:` | Yeni mekanizma ekleniyor |
+| Yeni mekanizma / özellik ekleme | `feat:` | Projenin kapsamı genişliyor |
+| Mevcut kurala kelime/terim ekleme | `fix:` | Mevcut mekanizmaya veri ekleniyor |
+| accept.txt'ye terim ekleme | `fix:` | Mevcut sözlük genişletiliyor |
+| False positive düzeltme | `fix:` | Hata gideriliyor |
+| Kural silme / yeniden adlandırma | `feat!:` | Kırıcı değişiklik |
+
+**Örnek:**
+
+```bash
+# ✅ DOĞRU: Mevcut kurala kelime eklemek
+git commit -m "fix(plaza): Katman 1 teknik terimlerinin Türkçe karşılıkları eklendi"
+
+# ❌ YANLIŞ: Kelime eklemek feat değildir!
+git commit -m "feat(plaza): yeni teknik terimler eklendi"
+
+# ✅ DOĞRU: Yeni kural dosyası oluşturmak
+git commit -m "feat(rules): Fabrika jargonu kuralı eklendi"
+```
+
 ---
 
 ## Güvenlik Katmanları

@@ -127,6 +127,21 @@ graph TD
 | `ci:` | CI/CD changes | No release |
 | `feat!:` | Breaking change | Major version |
 
+### Prefix Selection Rule (CRITICAL)
+
+> **Adding data to an existing rule (words, terms, swap entries) is NOT a new feature.**
+
+This distinction directly affects version numbers. Wrong prefix = unnecessary version bump.
+
+| Change | Correct prefix | Why |
+|---|---|---|
+| New `.yml` rule file | `feat:` | New mechanism added |
+| New mechanism / feature | `feat:` | Project scope expands |
+| Adding words/terms to existing rule | `fix:` | Data added to existing mechanism |
+| Adding terms to accept.txt | `fix:` | Existing dictionary expanded |
+| Fixing false positives | `fix:` | Bug fix |
+| Rule removal / rename | `feat!:` | Breaking change |
+
 ---
 
 ## Safety Layers
