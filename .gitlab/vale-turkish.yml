@@ -79,7 +79,7 @@
 
       # Vale'i JSON ile çalıştır ve raporları üret
       VALE_EXIT=0
-      vale --config=/tmp/vale-turkish.ini --output=JSON ${VALE_FILES} > /tmp/vale-results.json 2>&1 || VALE_EXIT=$?
+      vale --config=/tmp/vale-turkish.ini --output=JSON ${VALE_FILES} > /tmp/vale-results.json 2>/dev/null || VALE_EXIT=$?
 
       # Sonuçları göster (insan okunur)
       vale --config=/tmp/vale-turkish.ini ${VALE_FILES} || true
@@ -88,10 +88,10 @@
       if command -v jq >/dev/null 2>&1 && [ -s /tmp/vale-results.json ]; then
         SCRIPT_DIR="$(pwd)/$(ls -d Turkce-yazim-denetimi-*/scripts 2>/dev/null || ls -d vale-turkish-*/scripts 2>/dev/null)"
         if [ -f "${SCRIPT_DIR}/vale-to-junit.sh" ]; then
-          bash "${SCRIPT_DIR}/vale-to-junit.sh" /tmp/vale-results.json > junit.xml
+          bash "${SCRIPT_DIR}/vale-to-junit.sh" /tmp/vale-results.json > junit.xml 2>/dev/null || true
         fi
         if [ -f "${SCRIPT_DIR}/vale-to-codeclimate.sh" ]; then
-          bash "${SCRIPT_DIR}/vale-to-codeclimate.sh" /tmp/vale-results.json > gl-code-quality-report.json
+          bash "${SCRIPT_DIR}/vale-to-codeclimate.sh" /tmp/vale-results.json > gl-code-quality-report.json 2>/dev/null || true
         fi
       fi
 
