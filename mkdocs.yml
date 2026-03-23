@@ -41,26 +41,28 @@ theme:
     repo: fontawesome/brands/github
 
 nav:
-  - Ana Sayfa: index.md
-  - Başlangıç:
-    - Kurulum: tr/baslangic/kurulum.md
-    - İlk Adımlar: tr/baslangic/ilk-adimlar.md
-    - VS Code: tr/baslangic/vs-code.md
-  - Kullanım:
-    - Pre-commit: tr/kullanim/pre-commit.md
-    - GitHub Actions: tr/kullanim/github-actions.md
-    - GitLab CI: tr/kullanim/gitlab-ci.md
-    - Yapılandırma: tr/kullanim/yapilandirma.md
-  - Kurallar: tr/kurallar/index.md
-  - Katkıda Bulunma:
-    - Fork İş Akışı: tr/katki/fork-is-akisi.md
-    - Geliştirme Ortamı: tr/katki/gelistirme-ortami.md
-    - Yeni Kural Ekleme: tr/katki/yeni-kural-ekleme.md
-  - Hakkında:
-    - Felsefe: tr/hakkinda/felsefe.md
-    - Mimari: tr/hakkinda/mimari.md
-  - English:
-    - Overview: en/index.md
+  - index.md
+  - 🇹🇷 Türkçe:
+    - tr/index.md
+    - Başlangıç:
+      - Kurulum: tr/baslangic/kurulum.md
+      - İlk Adımlar: tr/baslangic/ilk-adimlar.md
+      - VS Code: tr/baslangic/vs-code.md
+    - Kullanım:
+      - Pre-commit: tr/kullanim/pre-commit.md
+      - GitHub Actions: tr/kullanim/github-actions.md
+      - GitLab CI: tr/kullanim/gitlab-ci.md
+      - Yapılandırma: tr/kullanim/yapilandirma.md
+    - Kurallar: tr/kurallar/index.md
+    - Katkıda Bulunma:
+      - Fork İş Akışı: tr/katki/fork-is-akisi.md
+      - Geliştirme Ortamı: tr/katki/gelistirme-ortami.md
+      - Yeni Kural Ekleme: tr/katki/yeni-kural-ekleme.md
+    - Hakkında:
+      - Felsefe: tr/hakkinda/felsefe.md
+      - Mimari: tr/hakkinda/mimari.md
+  - 🇬🇧 English:
+    - en/index.md
     - Getting Started: en/getting-started.md
     - Usage: en/usage.md
     - Rules Reference: en/rules.md
