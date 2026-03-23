@@ -32,14 +32,20 @@
         tar -xzf "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
         mv vale /usr/local/bin/
         rm -f "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
-      elif command -v apt-get >/dev/null 2>&1; then
-        # Debian/Ubuntu (shell executor)
+      else
+        # Debian/Ubuntu/diğer Linux (shell executor)
         wget -q "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz" || \
           curl -fsSL "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz" -o "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
         tar -xzf "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
-        sudo mv vale /usr/local/bin/ 2>/dev/null || mv vale /usr/local/bin/
+        mkdir -p "${HOME}/.local/bin"
+        mv vale "${HOME}/.local/bin/"
+        export PATH="${HOME}/.local/bin:${PATH}"
         rm -f "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
-      else
+      fi
+
+      if ! command -v vale >/dev/null 2>&1; then
+        echo "Hata: Vale kurulamadı."
+        exit 1
         echo "Desteklenmeyen ortam. wget veya curl kurulu olmalıdır."
         exit 1
       fi
