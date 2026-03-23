@@ -16,7 +16,7 @@
 
 .Turkce-yazim-denetimi:
   variables:
-    VALE_VERSION: "3.9.0"
+    VALE_VERSION: "3.14.1"
     MIN_ALERT_LEVEL: "suggestion"
     VALE_FILES: "."
     VALE_TURKISH_VERSION: "v1.1.0"

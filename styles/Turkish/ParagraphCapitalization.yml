@@ -1,6 +1,42 @@
 extends: capitalization
 message: "📝 Cümleler büyük harfle başlamalıdır."
-level: error
+level: warning
 match: $sentence
 style: sentence
 scope: paragraph
+exceptions:
+  - AI
+  - API
+  - AWS
+  - CD
+  - CI
+  - CLI
+  - CPU
+  - CSS
+  - DNS
+  - FTP
+  - GPU
+  - HTML
+  - HTTP
+  - HTTPS
+  - IP
+  - JSON
+  - MR
+  - REST
+  - SDK
+  - SQL
+  - SSH
+  - SSL
+  - TLS
+  - UI
+  - URL
+  - UUID
+  - XML
+  - YAML
+  - iPhone
+  - iPad
+  - iOS
+  - macOS
+  - npm
+  - git
+  - jq

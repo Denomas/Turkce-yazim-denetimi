@@ -17,7 +17,7 @@ inputs:
   vale_version:
     description: 'Kurulacak Vale sürümü'
     required: false
-    default: '3.9.0'
+    default: '3.14.1'
   reporter:
     description: 'Çıktı formatı (CLI, JSON, line, vb.)'
     required: false

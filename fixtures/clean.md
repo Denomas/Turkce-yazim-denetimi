@@ -49,3 +49,23 @@ def hesapla(deger):
 Satır içi kod da atlanmalıdır: `birşey` ve `herşey` gibi ifadeler sorun oluşturmaz.
 
 Bu paragraf ise normal Türkçe metindir ve denetlenmelidir.
+
+## Bold ve Kısaltma Başlangıçları
+
+Bu bölüm, bold ile başlayan liste öğelerinin ve kısaltmaların false positive üretmediğini doğrular.
+
+*   **Kapsam Dışı:** Canlı yayın hizmetleri bu belgenin kapsamı dışındadır.
+*   **Mimari Yapı:** Sistem üç katmanlı bir mimari kullanır.
+*   **Güvenlik Politikası:** Tüm erişimler kayıt altına alınır.
+
+1.  **FreeIPA kullanıcı hesabı** oluştur ve yapılandır.
+2.  **GitLab Runner** kurulumunu tamamla.
+3.  **Docker Compose** dosyasını düzenle.
+
+AI ajanlarının performans değerlendirmesi yapılacaktır.
+
+SSH anahtar çifti oluşturulmalıdır.
+
+API uç noktaları belgelenmelidir.
+
+CI süreçleri otomatik tetiklenir.

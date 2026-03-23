@@ -48,6 +48,6 @@ body:
     id: vale-version
     attributes:
       label: Vale sürümü
-      placeholder: "vale --version çıktısı (ör: vale v3.9.0)"
+      placeholder: "vale --version çıktısı (ör: vale v3.14.1)"
     validations:
       required: false

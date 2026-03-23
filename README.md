@@ -113,7 +113,7 @@ sudo port install vale
 Kurulumu doğrulayın:
 ```bash
 vale --version
-# vale v3.9.0
+# vale v3.14.1
 ```
 </details>
 
@@ -126,13 +126,13 @@ vale --version
 sudo snap install vale
 
 # Veya manuel indirme (x86_64)
-wget https://github.com/errata-ai/vale/releases/download/v3.9.0/vale_3.9.0_Linux_64-bit.tar.gz
-tar -xzf vale_3.9.0_Linux_64-bit.tar.gz
+wget https://github.com/errata-ai/vale/releases/download/v3.14.1/vale_3.14.1_Linux_64-bit.tar.gz
+tar -xzf vale_3.14.1_Linux_64-bit.tar.gz
 sudo mv vale /usr/local/bin/
 
 # ARM64 (Raspberry Pi, AWS Graviton)
-wget https://github.com/errata-ai/vale/releases/download/v3.9.0/vale_3.9.0_Linux_arm64.tar.gz
-tar -xzf vale_3.9.0_Linux_arm64.tar.gz
+wget https://github.com/errata-ai/vale/releases/download/v3.14.1/vale_3.14.1_Linux_arm64.tar.gz
+tar -xzf vale_3.14.1_Linux_arm64.tar.gz
 sudo mv vale /usr/local/bin/
 ```
 
@@ -468,7 +468,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 |-------|-----------|----------|
 | `files` | `.` | Denetlenecek dosyalar veya dizin |
 | `min_alert_level` | `suggestion` | Minimum uyarı seviyesi: `suggestion`, `warning`, `error` |
-| `vale_version` | `3.9.0` | Kurulacak Vale sürümü |
+| `vale_version` | `3.14.1` | Kurulacak Vale sürümü |
 | `reporter` | `CLI` | Çıktı formatı: `CLI`, `JSON`, `line` |
 | `no_spelling` | `false` | `true` ile yazım denetimini devre dışı bırakır |
 
@@ -478,7 +478,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 |----------|-----------|----------|
 | `VALE_FILES` | `.` | Denetlenecek dosyalar veya dizin |
 | `MIN_ALERT_LEVEL` | `suggestion` | Minimum uyarı seviyesi |
-| `VALE_VERSION` | `3.9.0` | Vale sürümü |
+| `VALE_VERSION` | `3.14.1` | Vale sürümü |
 | `VALE_TURKISH_VERSION` | `v1.1.0` | Türkçe Yazım Denetimi sürümü |
 | `VALE_TURKISH_NO_SPELLING` | `0` | `1` ile yazım denetimini devre dışı bırakır |
 
@@ -486,7 +486,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 
 | Değişken | Açıklama |
 |----------|----------|
-| `VALE_VERSION` | İndirilecek Vale sürümü (varsayılan: `3.9.0`) |
+| `VALE_VERSION` | İndirilecek Vale sürümü (varsayılan: `3.14.1`) |
 | `VALE_TURKISH_NO_SPELLING` | `1` olarak ayarlanırsa Spelling kuralı devre dışı kalır |
 | `VALE_CONFIG_PATH` | Vale yapılandırma dosyasının yolu |
 

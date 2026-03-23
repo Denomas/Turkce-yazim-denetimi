@@ -8,7 +8,7 @@
 #   - Vale sistemde yoksa otomatik indirir (~/.local/bin/vale)
 #   - StylesPath'i otomatik ayarlar
 #   - VALE_TURKISH_NO_SPELLING=1 ile yazım denetimi kapatılabilir
-#   - VALE_VERSION ile indirilen sürüm belirlenebilir (varsayılan: 3.9.0)
+#   - VALE_VERSION ile indirilen sürüm belirlenebilir (varsayılan: 3.14.1)
 
 set -euo pipefail
 
@@ -18,7 +18,7 @@ REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 STYLES_PATH="$REPO_DIR/styles"
 
 # Vale sürümü (ortam değişkeni ile özelleştirilebilir)
-VALE_VERSION="${VALE_VERSION:-3.9.0}"
+VALE_VERSION="${VALE_VERSION:-3.14.1}"
 
 # --- Vale'i bul veya indir ---
 # Desteklenen platformlar ve Vale binary isimleri:

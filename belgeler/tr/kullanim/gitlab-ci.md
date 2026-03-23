@@ -24,7 +24,7 @@ Bu şablon hem Docker hem de shell executor ile uyumludur.
 |----------|-----------|----------|
 | `VALE_FILES` | `.` | Denetlenecek dosyalar veya dizin |
 | `MIN_ALERT_LEVEL` | `suggestion` | Minimum uyarı seviyesi |
-| `VALE_VERSION` | `3.9.0` | Vale sürümü |
+| `VALE_VERSION` | `3.14.1` | Vale sürümü |
 | `VALE_TURKISH_VERSION` | `v1.1.0` | Türkçe Yazım Denetimi sürümü |
 | `VALE_TURKISH_NO_SPELLING` | `0` | `1` ile yazım denetimini devre dışı bırakır |
 

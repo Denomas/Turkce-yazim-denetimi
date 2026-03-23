@@ -52,7 +52,7 @@ This section allows English terms.
 |-------|---------|-------------|
 | `files` | `.` | Files or directory to check |
 | `min_alert_level` | `suggestion` | Minimum alert level |
-| `vale_version` | `3.9.0` | Vale version to install |
+| `vale_version` | `3.14.1` | Vale version to install |
 | `reporter` | `CLI` | Output format |
 | `no_spelling` | `false` | Disable Hunspell spelling |
 
@@ -62,7 +62,7 @@ This section allows English terms.
 |----------|---------|-------------|
 | `VALE_FILES` | `.` | Files or directory |
 | `MIN_ALERT_LEVEL` | `suggestion` | Minimum alert level |
-| `VALE_VERSION` | `3.9.0` | Vale version |
+| `VALE_VERSION` | `3.14.1` | Vale version |
 | `VALE_TURKISH_NO_SPELLING` | `0` | Set `1` to disable spelling |
 
 ## Environment Variables
