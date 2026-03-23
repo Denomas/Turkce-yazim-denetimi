@@ -31,3 +31,22 @@ filters:
   # Yaygın Türkçe fiil çekimleri (Hunspell eksiklerini kapatmak için)
   # Kök + Zaman/Mod + Şahıs (Basitleştirilmiş - Benzeşme ve yardımcı ünlüler dahil)
   - '\b[a-zğüşıöç]+(?:mek|mak|me|ma|iş|uş|er|ar|ir|ır|yor|ecek|acak|miş|mış|muş|mü|di|dı|du|dü|ti|tı|tu|tü)(?:im|ım|um|üm|sin|sın|sun|sün|iz|ız|uz|üz|ler|lar|niz|nız|nuz|nüz|k|m|n)?\b'
+  # Türkçe isim çekim ekleri (Hunspell'in tanımadığı kök+ek kombinasyonları)
+  # Genitif: -nin/-nın/-nun/-nün/-in/-ın/-un/-ün (en az 3 harfli kök)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}n[iıuü]n\b'
+  # Akuzatif (tampon ünlü): -ını/-ini/-unu/-ünü/-sını/-sini/-sunu/-sünü
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[sy][iıuü]n[iıuü]\b'
+  # Akuzatif (doğrudan): -unu/-ünü/-ını/-ini (kurulumunu, belgesini vb.)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}[iıuü]n[iıuü]\b'
+  # Çoğul + hal ekleri: -leri/-ları + iyelik/hal (belgeleri, belgelerinde, belgelerinin vb.)
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}l[ae]r[iıuü]\w*\b'
+  # İyelik 3. tekil + hal: -sinin/-sının/-sunun/-sünün
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}s[iıuü]n[iıuü]n\b'
+  # Lokatif uzun formlar: -ında/-inde/-ından/-inden
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}\w*[iıuü]nd[ae]n?\b'
+  # -mesi/-ması (fiilimsi): belgelenmesi, belirlenmesi vb.
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}m[ae]s[iıuü]\b'
+  # -lık/-lik/-luk/-lük (isim yapım): dayanıklılık, güvenilirlik vb.
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}l[iıuü]k\b'
+  # -deki/-daki (bulunma sıfatı): belgedeki, sistemdeki vb.
+  - '\b[A-ZĞÜŞİÖÇa-zğüşıöç]{3,}d[ae]ki\b'

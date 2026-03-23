@@ -73,6 +73,10 @@ Redis
 Temporal
 Terraform
 Vault
+# Neden: Ürün adlarının parçası (GitLab Runner, Docker Compose, FreeIPA)
+Compose
+FreeIPA
+Runner
 
 # ─── Evrensel Kısaltmalar (uluslararası standart) ────────
 # Neden: Tüm dillerde aynı kullanılır, Türkçe karşılığı yok
@@ -101,6 +105,12 @@ URL
 UUID
 XML
 YAML
+
+# ─── Teknik Terimler (Türkçe karşılığı olmayan, sektörde yaygın) ──
+# Neden: Yazılım terminolojisinde evrensel kullanım (false positive/negative)
+false
+positive
+negative
 
 # ─── Türkçe'ye Yerleşmiş Yabancı Terimler ───────────────
 # Neden: TDK tarafından kabul edilmiş veya yaygın kullanıma girmiş
