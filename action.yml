@@ -34,10 +34,45 @@ runs:
       shell: bash
       run: |
         VALE_VERSION="${{ inputs.vale_version }}"
-        wget -q "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
-        tar -xzf "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
-        sudo mv vale /usr/local/bin/
-        rm -f "vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+        OS="${{ runner.os }}"
+
+        case "$OS" in
+          Linux)
+            ARCHIVE="vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+            ;;
+          macOS)
+            ARCH=$(uname -m)
+            if [ "$ARCH" = "arm64" ]; then
+              ARCHIVE="vale_${VALE_VERSION}_macOS_arm64.tar.gz"
+            else
+              ARCHIVE="vale_${VALE_VERSION}_macOS_64-bit.tar.gz"
+            fi
+            ;;
+          Windows)
+            ARCHIVE="vale_${VALE_VERSION}_Windows_64-bit.zip"
+            ;;
+          *)
+            echo "Desteklenmeyen platform: $OS" && exit 1
+            ;;
+        esac
+
+        wget -q "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/${ARCHIVE}" -O vale-download || \
+          curl -fsSL "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/${ARCHIVE}" -o vale-download
+
+        if [[ "$ARCHIVE" == *.zip ]]; then
+          unzip -q vale-download
+        else
+          tar -xzf vale-download
+        fi
+
+        if [ "$OS" = "Windows" ]; then
+          mv vale.exe /usr/bin/ 2>/dev/null || mv vale.exe "$HOME/.local/bin/"
+        else
+          sudo mv vale /usr/local/bin/ 2>/dev/null || { mkdir -p "$HOME/.local/bin" && mv vale "$HOME/.local/bin/"; }
+          export PATH="$HOME/.local/bin:$PATH"
+        fi
+
+        rm -f vale-download
         vale --version
 
     - name: Türkçe kurallarla denetle
