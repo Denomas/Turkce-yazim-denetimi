@@ -38,18 +38,18 @@
       fi
 
       # Geçici config oluştur
-      cat > /tmp/vale-turkish.ini <<EOF
-      StylesPath = ${STYLES_DIR}
-      MinAlertLevel = ${MIN_ALERT_LEVEL}
-      Vocab = Turkish
-
-      [*.md]
-      BasedOnStyles = Turkish
-      ${SPELLING_LINE}
-
-      [*.txt]
-      BasedOnStyles = Turkish
-      ${SPELLING_LINE}
-      EOF
+      {
+        echo "StylesPath = ${STYLES_DIR}"
+        echo "MinAlertLevel = ${MIN_ALERT_LEVEL}"
+        echo "Vocab = Turkish"
+        echo ""
+        echo "[*.md]"
+        echo "BasedOnStyles = Turkish"
+        [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
+        echo ""
+        echo "[*.txt]"
+        echo "BasedOnStyles = Turkish"
+        [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
+      } > /tmp/vale-turkish.ini
 
       vale --config=/tmp/vale-turkish.ini ${VALE_FILES}

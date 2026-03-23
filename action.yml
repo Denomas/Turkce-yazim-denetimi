@@ -53,19 +53,19 @@ runs:
           SPELLING_LINE="Turkish.Spelling = NO"
         fi
 
-        cat > "$VALE_CONFIG" <<EOF
-        StylesPath = ${STYLES_PATH}
-        MinAlertLevel = ${{ inputs.min_alert_level }}
-        Vocab = Turkish
-
-        [*.md]
-        BasedOnStyles = Turkish
-        ${SPELLING_LINE}
-
-        [*.txt]
-        BasedOnStyles = Turkish
-        ${SPELLING_LINE}
-        EOF
+        {
+          echo "StylesPath = ${STYLES_PATH}"
+          echo "MinAlertLevel = ${{ inputs.min_alert_level }}"
+          echo "Vocab = Turkish"
+          echo ""
+          echo "[*.md]"
+          echo "BasedOnStyles = Turkish"
+          [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
+          echo ""
+          echo "[*.txt]"
+          echo "BasedOnStyles = Turkish"
+          [ -n "${SPELLING_LINE}" ] && echo "${SPELLING_LINE}"
+        } > "$VALE_CONFIG"
 
         vale --config="$VALE_CONFIG" \
              --output="${{ inputs.reporter }}" \

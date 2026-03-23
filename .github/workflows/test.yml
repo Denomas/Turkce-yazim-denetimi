@@ -39,15 +39,12 @@ jobs:
       run: vale fixtures/clean.md
 
     - name: Run Vale on Dirty File (Should Fail)
-      continue-on-error: true
       run: |
-        vale fixtures/dirty.md
-        if [ $? -eq 0 ]; then
-          echo "Error: Vale should have failed on dirty.md"
+        if vale fixtures/dirty.md; then
+          echo "Hata: Vale dirty.md'de hata bulmasi gerekirdi"
           exit 1
         else
-          echo "Success: Vale correctly identified errors in dirty.md"
-          exit 0
+          echo "Basarili: Vale dirty.md'de hatalari dogru sekilde yakaladi"
         fi
 
   test-precommit:
