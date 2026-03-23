@@ -1,0 +1,58 @@
+action.yml
+  1d815db16820323f 71-76
+.github/PULL_REQUEST_TEMPLATE.md
+  1d815db16820323f 1-12
+.gitlab/vale-turkish.yml
+  1d815db16820323f 80-107
+.github/ISSUE_TEMPLATE/kural-onerisi.yml
+  1d815db16820323f 1-55
+scripts/vale-to-codeclimate.sh
+  1d815db16820323f 1-33
+.gitignore
+  1d815db16820323f 9-11
+scripts/vale-to-junit.sh
+  1d815db16820323f 1-34
+.github/ISSUE_TEMPLATE/config.yml
+  1d815db16820323f 1-8
+.editorconfig
+  1d815db16820323f 1-21
+README.md
+  1d815db16820323f 5,9
+scripts/vale-report.sh
+  1d815db16820323f 1-106
+.github/ISSUE_TEMPLATE/hata-raporu.yml
+  1d815db16820323f 1-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "01dc44fd67bee7aac1a23c27e2e71383e4902166",
+  "prompts": {
+    "1d815db16820323f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be17d1d5-b85b-442f-8fb0-a279c748dda5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 361,
+      "total_deletions": 4,
+      "accepted_lines": 361,
+      "overriden_lines": 0
+    },
+    "4fb8bc941021d570": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4ce1fafc-7a45-4eb1-87c7-8020851776f4",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 56,
+      "overriden_lines": 0
+    }
+  }
+}
