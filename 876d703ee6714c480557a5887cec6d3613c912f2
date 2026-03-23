@@ -1,0 +1,29 @@
+hooks/Turkce-yazim-denetimi.sh
+  1d815db16820323f 11,20-25
+action.yml
+  1d815db16820323f 36,38-41
+.gitlab/Turkce-yazim-denetimi.yml
+  1d815db16820323f 26-30
+README.md
+  1d815db16820323f 102-103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "876d703ee6714c480557a5887cec6d3613c912f2",
+  "prompts": {
+    "1d815db16820323f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be17d1d5-b85b-442f-8fb0-a279c748dda5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 19,
+      "total_deletions": 3,
+      "accepted_lines": 19,
+      "overriden_lines": 0
+    }
+  }
+}
