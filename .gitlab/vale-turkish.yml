@@ -54,7 +54,7 @@
       wget -q "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -O vale-turkish.tar.gz || \
         curl -fsSL "https://github.com/Denomas/Turkce-yazim-denetimi/archive/refs/tags/${VALE_TURKISH_VERSION}.tar.gz" -o vale-turkish.tar.gz
       tar -xzf vale-turkish.tar.gz
-      STYLES_DIR="$(pwd)/vale-turkish-${VALE_TURKISH_VERSION#v}/styles"
+      STYLES_DIR="$(ls -d Turkce-yazim-denetimi-*/styles 2>/dev/null || ls -d vale-turkish-*/styles 2>/dev/null)"
 
       # Spelling devre dışı bırakma
       SPELLING_LINE=""
@@ -86,7 +86,7 @@
 
       # JUnit XML raporu (GitLab Tests sekmesi)
       if command -v jq >/dev/null 2>&1 && [ -s /tmp/vale-results.json ]; then
-        SCRIPT_DIR="$(pwd)/vale-turkish-${VALE_TURKISH_VERSION#v}/scripts"
+        SCRIPT_DIR="$(ls -d Turkce-yazim-denetimi-*/scripts 2>/dev/null || ls -d vale-turkish-*/scripts 2>/dev/null)"
         if [ -f "${SCRIPT_DIR}/vale-to-junit.sh" ]; then
           bash "${SCRIPT_DIR}/vale-to-junit.sh" /tmp/vale-results.json > junit.xml
         fi
