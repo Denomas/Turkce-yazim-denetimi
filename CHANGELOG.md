@@ -2,6 +2,30 @@
 
 Bu proje, [Semantik Versiyonlama](https://semver.org/lang/tr/) kurallarına uymaya çalışır.
 
+## v1.2.0
+
+### 🐛 Düzeltmeler
+*   **Capitalization False Positive:** ListCapitalization ve ParagraphCapitalization kurallarına exceptions eklendi. AI, API, SSH, HTML, URL vb. kısaltmalar artık false positive üretmiyor.
+*   **Bold Liste Öğeleri:** `**Bold başlık:** açıklama` formatındaki liste öğelerinde sentence-case kontrolü warning seviyesine düşürüldü (Vale çekirdek limitasyonu).
+*   **GitLab CI Şablonu:** Dinamik dizin adı, mutlak yol çözümleme ve stderr ayrımı düzeltmeleri.
+
+### 🔧 İyileştirmeler
+*   **Vale 3.14.1:** Tüm entegrasyonlarda Vale sürümü 3.14.1'e yükseltildi.
+*   **Denomas Markası:** Tüm Türkçe dokümanlarda "Türkçe Yazım Denetimi", İngilizce dokümanlarda "Vale Turkish" markalaması.
+*   **Teknik Tanımlayıcılar:** `vale-turkish` → `Turkce-yazim-denetimi` (hook ID, dosya adları, şablon adları).
+
+### 📖 Dokümantasyon
+*   **İki Dilli Dokümantasyon Sitesi:** MkDocs Material ile GitHub Pages üzerinde TR + EN belgeler.
+*   **Dil Algılama:** Tarayıcı diline göre otomatik yönlendirme (TR → /tr/, diğer → /en/).
+*   **Fork İş Akışı:** Mermaid diyagram ile katkıda bulunma rehberi.
+*   **Kullanıcı Senaryoları:** AI içerik QA, lokalizasyon, çok dilli projeler.
+
+### 🏗️ Altyapı
+*   **Örnek Repolar:** Denomas organizasyonuna taşındı ve `Turkce-yazim-denetimi-ornek` olarak yeniden adlandırıldı.
+*   **CI Tasarımı:** Temiz/hatalı belge ayrı job'lar (GitHub + GitLab).
+
+---
+
 ## v1.1.0
 
 ### 🔌 Entegrasyonlar
