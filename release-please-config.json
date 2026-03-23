@@ -1,0 +1,26 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "bump-minor-pre-major": true,
+      "include-v-in-tag": true,
+      "changelog-sections": [
+        {"type": "feat", "section": "Yeni Özellikler"},
+        {"type": "fix", "section": "Düzeltmeler"},
+        {"type": "docs", "section": "Dokümantasyon"},
+        {"type": "refactor", "section": "İyileştirmeler"},
+        {"type": "test", "section": "Testler"},
+        {"type": "ci", "section": "CI/CD", "hidden": true},
+        {"type": "chore", "section": "Bakım", "hidden": true},
+        {"type": "deps", "section": "Bağımlılıklar", "hidden": true}
+      ],
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "library.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  }
+}

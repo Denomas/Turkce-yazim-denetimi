@@ -55,6 +55,7 @@ nav:
       - Yapılandırma: tr/kullanim/yapilandirma.md
     - Kurallar: tr/kurallar/index.md
     - Katkıda Bulunma:
+      - Geliştirici İş Akışı: tr/katki/gelistirici-is-akisi.md
       - Fork İş Akışı: tr/katki/fork-is-akisi.md
       - Geliştirme Ortamı: tr/katki/gelistirme-ortami.md
       - Yeni Kural Ekleme: tr/katki/yeni-kural-ekleme.md
@@ -67,6 +68,7 @@ nav:
     - Usage: en/usage.md
     - Rules Reference: en/rules.md
     - Contributing: en/contributing.md
+    - Developer Workflow: en/developer-workflow.md
     - Use Cases: en/use-cases.md
 
 markdown_extensions:

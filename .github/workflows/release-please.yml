@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+      major: ${{ steps.release.outputs.major }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  publish:
+    needs: [release-please]
+    if: ${{ needs.release-please.outputs.release_created }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Turkish.zip oluştur
+        run: |
+          zip -r Turkish.zip styles/ -x "*.DS_Store"
+
+      - name: Release asset'leri yükle
+        run: |
+          gh release upload ${{ needs.release-please.outputs.tag_name }} \
+            Turkish.zip library.json --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Floating major tag güncelle
+        run: |
+          MAJOR=${{ needs.release-please.outputs.major }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -fa "v${MAJOR}" -m "v${MAJOR} floating tag"
+          git push origin "v${MAJOR}" --force
