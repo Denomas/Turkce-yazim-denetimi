@@ -79,4 +79,4 @@ Turkce-yazim-denetimi:
 
 ## Sonraki Adım
 
-[:octicons-arrow-right-24: İlk Adımlar](ilk-adimlar.md) — İlk denetiminizi yapın.
+[→ İlk Adımlar](ilk-adimlar.md) — İlk denetiminizi yapın.
