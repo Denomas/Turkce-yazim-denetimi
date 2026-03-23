@@ -1,0 +1,39 @@
+.github/workflows/release-please.yml
+  1d815db16820323f 1-51
+belgeler/en/developer-workflow.md
+  1d815db16820323f 1-169
+.github/workflows/pr-title.yml
+  1d815db16820323f 1-32
+mkdocs.yml
+  1d815db16820323f 58,71
+release-please-config.json
+  1d815db16820323f 1-26
+belgeler/tr/katki/gelistirici-is-akisi.md
+  1d815db16820323f 1-225
+.github/workflows/dependabot-auto-merge.yml
+  1d815db16820323f 1-24
+.release-please-manifest.json
+  1d815db16820323f 1-3
+.github/workflows/stale.yml
+  1d815db16820323f 1-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "55bb96ab0e3dd0b93a92f2450a0e5b750550e2de",
+  "prompts": {
+    "1d815db16820323f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "be17d1d5-b85b-442f-8fb0-a279c748dda5",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 558,
+      "total_deletions": 0,
+      "accepted_lines": 558,
+      "overriden_lines": 0
+    }
+  }
+}
