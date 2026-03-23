@@ -8,6 +8,8 @@
 [![Türkçe](https://img.shields.io/badge/lang-T%C3%BCrk%C3%A7e-red.svg)](README.md)
 [![Vale](https://img.shields.io/badge/altyap%C4%B1-Vale-blue.svg)](https://vale.sh)
 
+> **[Detaylı dokümantasyon](https://denomas.github.io/Turkce-yazim-denetimi/)** | **[English docs](https://denomas.github.io/Turkce-yazim-denetimi/en/)**
+
 **"Birşey" mi yazılır yoksa "bir şey" mi? "Herkez" mi "herkes" mi? Artık dert etmenize gerek yok!**
 
 ### 🌟 Dilimize sahip çıkıyoruz!
