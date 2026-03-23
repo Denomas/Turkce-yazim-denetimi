@@ -33,7 +33,12 @@ runs:
     - name: Vale kur
       shell: bash
       run: |
+        # Vale sürümü: input > .github/vale-version > hardcoded fallback
         VALE_VERSION="${{ inputs.vale_version }}"
+        ACTION_PATH="$(realpath "${{ github.action_path }}")"
+        if [ "$VALE_VERSION" = "3.14.1" ] && [ -f "$ACTION_PATH/.github/vale-version" ]; then
+          VALE_VERSION="$(tr -d '[:space:]' < "$ACTION_PATH/.github/vale-version")"
+        fi
         OS="${{ runner.os }}"
 
         case "$OS" in

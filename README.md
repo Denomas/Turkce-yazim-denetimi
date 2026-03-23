@@ -99,6 +99,8 @@ Vale'yi bilgisayarınıza kurup, Türkçe Yazım Denetimi'ni üzerine dil paketi
 
 #### Adım 1: Vale'i kurun
 
+> **Not:** Aşağıdaki örneklerde gösterilen Vale sürümü güncel olmayabilir. En güncel sürüm için `.github/vale-version` dosyasına bakın.
+
 <details>
 <summary><strong>🍎 macOS</strong></summary>
 
@@ -468,7 +470,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 |-------|-----------|----------|
 | `files` | `.` | Denetlenecek dosyalar veya dizin |
 | `min_alert_level` | `suggestion` | Minimum uyarı seviyesi: `suggestion`, `warning`, `error` |
-| `vale_version` | `3.14.1` | Kurulacak Vale sürümü |
+| `vale_version` | `.github/vale-version` | Kurulacak Vale sürümü |
 | `reporter` | `CLI` | Çıktı formatı: `CLI`, `JSON`, `line` |
 | `no_spelling` | `false` | `true` ile yazım denetimini devre dışı bırakır |
 
@@ -478,7 +480,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 |----------|-----------|----------|
 | `VALE_FILES` | `.` | Denetlenecek dosyalar veya dizin |
 | `MIN_ALERT_LEVEL` | `suggestion` | Minimum uyarı seviyesi |
-| `VALE_VERSION` | `3.14.1` | Vale sürümü |
+| `VALE_VERSION` | `.github/vale-version` | Vale sürümü |
 | `VALE_TURKISH_VERSION` | `v1.1.0` | Türkçe Yazım Denetimi sürümü |
 | `VALE_TURKISH_NO_SPELLING` | `0` | `1` ile yazım denetimini devre dışı bırakır |
 
@@ -486,7 +488,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 
 | Değişken | Açıklama |
 |----------|----------|
-| `VALE_VERSION` | İndirilecek Vale sürümü (varsayılan: `3.14.1`) |
+| `VALE_VERSION` | İndirilecek Vale sürümü (`.github/vale-version` dosyasından okunur) |
 | `VALE_TURKISH_NO_SPELLING` | `1` olarak ayarlanırsa Spelling kuralı devre dışı kalır |
 | `VALE_CONFIG_PATH` | Vale yapılandırma dosyasının yolu |
 

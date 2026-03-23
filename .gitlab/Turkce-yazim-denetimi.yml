@@ -23,6 +23,11 @@
     VALE_TURKISH_NO_SPELLING: "0"
   script:
     - |
+      # Vale sürümünü tek kaynaktan oku (varsa)
+      if [ -f ".github/vale-version" ]; then
+        VALE_VERSION="$(tr -d '[:space:]' < .github/vale-version)"
+      fi
+
       # Vale motorunu kur (sistem, Docker veya otomatik indirme)
       if command -v vale >/dev/null 2>&1; then
         echo "Vale zaten kurulu: $(vale --version)"

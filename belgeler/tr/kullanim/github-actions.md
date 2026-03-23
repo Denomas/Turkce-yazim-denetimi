@@ -32,7 +32,7 @@ jobs:
 |-------|-----------|----------|
 | `files` | `.` | Denetlenecek dosyalar veya dizin |
 | `min_alert_level` | `suggestion` | Minimum uyarı seviyesi: `suggestion`, `warning`, `error` |
-| `vale_version` | `3.14.1` | Kurulacak Vale sürümü |
+| `vale_version` | `.github/vale-version` | Kurulacak Vale sürümü |
 | `reporter` | `CLI` | Çıktı formatı: `CLI`, `JSON`, `line` |
 | `no_spelling` | `false` | `true` ile yazım denetimini devre dışı bırakır |
 

@@ -64,6 +64,6 @@ echo "DevOps" >> styles/config/vocabularies/Turkish/accept.txt
 
 | Değişken | Açıklama |
 |----------|----------|
-| `VALE_VERSION` | İndirilecek Vale sürümü (varsayılan: `3.14.1`) |
+| `VALE_VERSION` | İndirilecek Vale sürümü (`.github/vale-version` dosyasından okunur) |
 | `VALE_TURKISH_NO_SPELLING` | `1` olarak ayarlanırsa Spelling kuralı devre dışı kalır |
 | `VALE_CONFIG_PATH` | Vale yapılandırma dosyasının yolu |
