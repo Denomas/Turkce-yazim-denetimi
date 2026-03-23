@@ -1,0 +1,25 @@
+styles/Turkish/Spelling.yml
+  fa629cb413a34b5c 34-52
+styles/config/vocabularies/Turkish/accept.txt
+  fa629cb413a34b5c 76-79,109-114
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "d7b9cd0686e37455b85c223ab829b4eedbf783ff",
+  "prompts": {
+    "fa629cb413a34b5c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "417c24d3-1f5b-4e2f-8432-11c10ed97316",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 32,
+      "total_deletions": 3,
+      "accepted_lines": 29,
+      "overriden_lines": 0
+    }
+  }
+}
