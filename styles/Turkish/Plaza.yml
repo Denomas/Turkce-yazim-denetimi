@@ -27,6 +27,25 @@ swap:
   done olmak: tamamlamak
   over-engineer etmek: aşırı tasarlamak
 
+  # --- Teknik Terimler (Katman 1: Türkçe karşılığı var) ---
+  monitoring: izleme
+  backup: yedekleme
+  recovery: kurtarma
+  scaling: ölçeklendirme
+  failover: yük devri
+  rollback: geri alma
+  pipeline: iş hattı
+  dashboard: kontrol paneli
+  endpoint: uç nokta
+  runtime: çalışma zamanı
+  middleware: ara katman
+  workflow: iş akışı
+  vulnerability: zafiyet
+  incident: olay
+  resilience: dayanıklılık
+  latency: gecikme
+  throughput: işlem hacmi
+
   # --- Mevcut Kapsamlı Liste ---
   deploy etmek: yayına almak
   pushlamak: göndermek
