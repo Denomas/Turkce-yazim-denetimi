@@ -35,3 +35,17 @@ Cumhuriyet döneminde yapılan atılımlar, dilimizin bilim ve sanat alanında d
 *   Kurulum süresi arttığı için çevrim süresi düştü.
 *   Hurda olan partiler için yeniden işleme yapılacak.
 *   Üretim çalışanları fazla mesai yaptı.
+
+## Teknik Belgeler
+
+Aşağıdaki kod bloğu denetlenmemelidir:
+
+```python
+# birşey herşey yanlız - bunlar kod bloğunda olduğu için hata vermemeli
+def hesapla(deger):
+    return deger * 2
+```
+
+Satır içi kod da atlanmalıdır: `birşey` ve `herşey` gibi ifadeler sorun oluşturmaz.
+
+Bu paragraf ise normal Türkçe metindir ve denetlenmelidir.

@@ -82,7 +82,10 @@ jobs:
         VALE_TURKISH_NO_SPELLING=1 pre-commit try-repo . vale-turkish --files fixtures/dirty.md && exit 1 || echo "Basarili: pre-commit hook hatalari yakaladi"
 
   test-action:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v6
