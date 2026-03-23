@@ -27,9 +27,9 @@ jobs:
 
       - name: MkDocs derle
         run: |
-          uv tool install mkdocs-material
-          uv tool install mkdocs-minify-plugin
-          uvx --from mkdocs-material mkdocs build --strict
+          uv venv
+          uv pip install mkdocs-material mkdocs-minify-plugin
+          .venv/bin/mkdocs build --strict
 
       - uses: actions/upload-pages-artifact@v3
         with:
