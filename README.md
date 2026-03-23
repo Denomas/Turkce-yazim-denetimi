@@ -58,7 +58,7 @@ pip install pre-commit
 ```yaml
 repos:
   - repo: https://github.com/tolgakaratas/vale-turkish
-    rev: v1.1.0
+    rev: v1
     hooks:
       - id: vale-turkish
 ```
@@ -290,7 +290,7 @@ Projenizde hem Türkçe hem İngilizce belgeler varsa, vale-turkish'i yalnızca 
 **GitHub Actions ile** — `files` girdisini kullanın:
 
 ```yaml
-- uses: tolgakaratas/vale-turkish@v1.1.0
+- uses: tolgakaratas/vale-turkish@v1
   with:
     files: 'docs/tr/'
 ```
@@ -376,7 +376,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: tolgakaratas/vale-turkish@v1.1.0
+      - uses: tolgakaratas/vale-turkish@v1
         with:
           files: '.'
           min_alert_level: 'error'
@@ -440,7 +440,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 
 ```yaml
 - repo: https://github.com/tolgakaratas/vale-turkish
-  rev: v1.1.0
+  rev: v1
   hooks:
     - id: vale-turkish
       args: [--minAlertLevel=error]   # Vale CLI argümanları
