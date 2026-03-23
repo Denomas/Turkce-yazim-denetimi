@@ -1,0 +1,23 @@
+styles/config/vocabularies/Turkish/accept.txt
+  4fb8bc941021d570 2-10,12-14,56-57,62-63,69-70,77-78,81-85,87-90,92,94,96-103,105-108,110-114
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "b25719a5872107af3aaacc7507ad073cb54f0a2c",
+  "prompts": {
+    "4fb8bc941021d570": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4ce1fafc-7a45-4eb1-87c7-8020851776f4",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 51,
+      "total_deletions": 92,
+      "accepted_lines": 51,
+      "overriden_lines": 0
+    }
+  }
+}
