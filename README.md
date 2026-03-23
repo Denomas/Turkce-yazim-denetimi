@@ -93,7 +93,7 @@ Tebrikler! Artık her commit'inizde Türkçe yazım denetimi otomatik çalışı
 
 ### Yol 2: Yerel Vale Kurulumu (Türkçe Dil Paketi Olarak)
 
-Vale'yi bilgisayarınıza kurup, vale-turkish'i üzerine Türkçe dil paketi olarak ekleyebilirsiniz. Bu yol, pre-commit veya CI/CD kullanmadan doğrudan komut satırından çalışmak isteyenler içindir.
+Vale'yi bilgisayarınıza kurup, Türkçe Yazım Denetimi'ni üzerine dil paketi olarak ekleyebilirsiniz. Bu yol, pre-commit veya CI/CD kullanmadan doğrudan komut satırından çalışmak isteyenler içindir.
 
 #### Adım 1: Vale'i kurun
 
@@ -175,7 +175,7 @@ vale --version
 ```bash
 # Projeyi indirin
 git clone https://github.com/Denomas/Turkce-yazim-denetimi.git
-cd vale-turkish
+cd Turkce-yazim-denetimi
 ```
 
 <details>
@@ -477,7 +477,7 @@ Her satıra bir kelime yazın. Bu kelimeler artık yazım hatası olarak işaret
 | `VALE_FILES` | `.` | Denetlenecek dosyalar veya dizin |
 | `MIN_ALERT_LEVEL` | `suggestion` | Minimum uyarı seviyesi |
 | `VALE_VERSION` | `3.9.0` | Vale sürümü |
-| `VALE_TURKISH_VERSION` | `v1.1.0` | vale-turkish sürümü |
+| `VALE_TURKISH_VERSION` | `v1.1.0` | Türkçe Yazım Denetimi sürümü |
 | `VALE_TURKISH_NO_SPELLING` | `0` | `1` ile yazım denetimini devre dışı bırakır |
 
 ### Ortam değişkenleri
@@ -528,7 +528,7 @@ Turkce-yazim-denetimi/
 ├── .gitlab/
 │   └── vale-turkish.yml            # GitLab CI şablonu
 ├── hooks/
-│   └── vale-turkish.sh             # Wrapper script (Vale otomatik kurulum dahil)
+│   └── vale-turkish.sh             # Kurulum ve çalıştırma betiği
 ├── .vale.ini                       # Örnek yapılandırma
 ├── install.sh                      # Kurulum scripti (macOS/Linux)
 ├── install.ps1                     # Kurulum scripti (Windows)

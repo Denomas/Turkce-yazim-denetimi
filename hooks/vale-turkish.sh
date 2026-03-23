@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# vale-turkish wrapper script
-# Vale'i doğru StylesPath ile çalıştırır.
-# Pre-commit, GitHub Actions ve GitLab CI entegrasyonları bu scripti kullanır.
+# Türkçe Yazım Denetimi — Kurulum ve Çalıştırma Betiği
+# Denomas (https://denomas.com)
+# Vale motorunu doğru StylesPath ile çalıştırır.
+# Pre-commit, GitHub Actions ve GitLab CI entegrasyonları bu betiği kullanır.
 #
 # Özellikler:
 #   - Vale sistemde yoksa otomatik indirir (~/.local/bin/vale)
