@@ -1,0 +1,26 @@
+name: Eski Issue/PR Temizliği
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: "Bu konu 30 gündür işlem görmedi. 7 gün içinde yanıt verilmezse otomatik kapatılacaktır."
+          stale-pr-message: "Bu PR 30 gündür işlem görmedi. 7 gün içinde güncellenmezse otomatik kapatılacaktır."
+          close-issue-message: "30+7 gün boyunca işlem görmediği için otomatik kapatıldı. Tekrar açabilirsiniz."
+          close-pr-message: "30+7 gün boyunca işlem görmediği için otomatik kapatıldı. Tekrar açabilirsiniz."
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: 'eski'
+          stale-pr-label: 'eski'
+          exempt-issue-labels: 'sabitlenmiş,devam-ediyor'
+          exempt-pr-labels: 'sabitlenmiş,devam-ediyor'
