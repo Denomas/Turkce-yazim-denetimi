@@ -3,7 +3,7 @@
   "description": "Vale Turkish style package by Denomas. 16 rules for Turkish spelling, grammar, plaza language, academic style, technical terms, and readability checks. Includes Hunspell dictionary (36 MB).",
   "homepage": "https://github.com/Denomas/Turkce-yazim-denetimi",
   "author": "Denomas",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "url": "https://github.com/Denomas/Turkce-yazim-denetimi/releases/latest/download/Turkish.zip",
   "feed": "https://github.com/Denomas/Turkce-yazim-denetimi/releases.atom"
 }
