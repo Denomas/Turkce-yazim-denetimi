@@ -1,0 +1,23 @@
+hooks/Turkce-yazim-denetimi.sh
+  4fb8bc941021d570 188-193
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "9681a808d4895a6723e9f1d1c8e2729f1fb3fb17",
+  "prompts": {
+    "4fb8bc941021d570": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4ce1fafc-7a45-4eb1-87c7-8020851776f4",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Tolga Karatas <tolgakaratas@gmail.com>",
+      "messages": [],
+      "total_additions": 6,
+      "total_deletions": 4,
+      "accepted_lines": 6,
+      "overriden_lines": 0
+    }
+  }
+}
