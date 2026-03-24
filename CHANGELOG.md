@@ -2,6 +2,22 @@
 
 Bu proje, [Semantik Versiyonlama](https://semver.org/lang/tr/) kurallarına uymaya çalışır.
 
+## [1.3.1](https://github.com/Denomas/Turkce-yazim-denetimi/compare/v1.3.0...v1.3.1) (2026-03-24)
+
+
+### Düzeltmeler
+
+* **accept:** gereksiz Türkçe kelimeler kaldırıldı, Vale workaround'ları belgelendi ([28d8447](https://github.com/Denomas/Turkce-yazim-denetimi/commit/28d84479ce35fa25383e603cb06582ff89ca44f0))
+* **plaza:** Katman 1 teknik terimlerinin Türkçe karşılıkları eklendi ([b02f895](https://github.com/Denomas/Turkce-yazim-denetimi/commit/b02f8957a6704e513a635bf29da3c17555e44591))
+* spelling varsayılan kapalı — Vale Hunspell entegrasyonunda bilinen bug ([9681a80](https://github.com/Denomas/Turkce-yazim-denetimi/commit/9681a808d4895a6723e9f1d1c8e2729f1fb3fb17))
+* **spelling:** Türkçe isim çekim eki filtreleri ve eksik terimler eklendi ([d7b9cd0](https://github.com/Denomas/Turkce-yazim-denetimi/commit/d7b9cd0686e37455b85c223ab829b4eedbf783ff))
+* **spelling:** Vale Go binding workaround filtreleri eklendi ([2cef796](https://github.com/Denomas/Turkce-yazim-denetimi/commit/2cef796a18df937e5e5e0230e10d90a523a294c0))
+
+
+### Dokümantasyon
+
+* commit prefix seçim kuralı tüm geliştirici dökümanlarına eklendi ([d8d02ac](https://github.com/Denomas/Turkce-yazim-denetimi/commit/d8d02ace6c4d934a750e1dc8f5dd719afdb4a662))
+
 ## [1.3.0](https://github.com/Denomas/Turkce-yazim-denetimi/compare/v1.2.0...v1.3.0) (2026-03-23)
 
 
