@@ -185,10 +185,12 @@ fi
 VALE_CONFIG=$(mktemp "${TMPDIR:-/tmp}/Turkce-yazim-denetimi-$$.XXXXXX.ini")
 trap 'rm -f "$VALE_CONFIG"' EXIT
 
-# Spelling kuralını devre dışı bırakma seçeneği (CI ortamları için)
-SPELLING_LINE=""
-if [ "${VALE_TURKISH_NO_SPELLING:-0}" = "1" ]; then
-  SPELLING_LINE="Turkish.Spelling = NO"
+# Spelling kuralı varsayılan KAPALI (Vale Hunspell entegrasyonunda bilinen bug var).
+# Spelling açmak için: VALE_TURKISH_SPELLING=1
+# Eski env var (geriye uyumluluk): VALE_TURKISH_NO_SPELLING=1 hâlâ çalışır.
+SPELLING_LINE="Turkish.Spelling = NO"
+if [ "${VALE_TURKISH_SPELLING:-0}" = "1" ]; then
+  SPELLING_LINE=""
 fi
 
 cat > "$VALE_CONFIG" <<EOF
