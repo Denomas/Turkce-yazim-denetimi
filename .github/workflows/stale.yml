@@ -12,7 +12,7 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v9
+      - uses: actions/stale@v10
         with:
           stale-issue-message: "Bu konu 30 gündür işlem görmedi. 7 gün içinde yanıt verilmezse otomatik kapatılacaktır."
           stale-pr-message: "Bu PR 30 gündür işlem görmedi. 7 gün içinde güncellenmezse otomatik kapatılacaktır."
