@@ -1,0 +1,26 @@
+name: Release Please Smoke Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - id: release
+        uses: googleapis/release-please-action@v5
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          skip-github-release: true
+          skip-github-pull-request: true
+      - name: Çıktıları yazdır
+        run: |
+          echo "release_created=${{ steps.release.outputs.release_created }}"
+          echo "tag_name=${{ steps.release.outputs.tag_name }}"
+          echo "major=${{ steps.release.outputs.major }}"
